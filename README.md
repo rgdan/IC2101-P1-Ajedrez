@@ -9,5 +9,3 @@ Con este proyecto se buscó implementar un sistema de ajedrez en Java que permit
 
 ## Documentacion
 [Unicamente contiene el diagrama UML.](https://docs.google.com/document/d/1I1N9tYGP2NdB9T1GdFRR_o45v9uhQIi9lZsVJiBt0lc/edit?usp=sharing)
-
-.
