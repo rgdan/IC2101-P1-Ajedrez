@@ -1,4 +1,3 @@
-
 package com.tec.ajedrez;
 
 public class Casilla {
@@ -6,56 +5,70 @@ public class Casilla {
     private int fila;
     private int columna;
     private Pieza pieza;
+
+    /* CONSTRUCTOR */
     
-    //Metodos
+    public Casilla(int fila, int columna) {
+        this.fila = fila;
+        this.columna = columna;
+        this.pieza = null;
+    }
     
-    // is the cell empty?
-    public boolean estaVacia() {
-        return pieza == null;
+    /* METODOS */
+
+    // Verificar si la casilla esta ocupada
+    public boolean estaOcupada() {
+        return pieza != null;
     }
 
-    //Indica si la casilla contiene una pieza del color indicado
+    // Ver si la casilla esta ocupada por cierto color
     public boolean tieneColor(Color color) {
         return estaOcupada() && pieza.getColor() == color;
     }
-    
-    //Elimina la pieza de la casilla y la retorna
+
+    // Colocar pieza si la casilla no esta ocupada
+    public boolean colocarPieza(Pieza pieza) {
+        if (!estaOcupada()) {
+            this.pieza = pieza;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // Quitar pieza si la casilla esta ocupada
     public Pieza quitarPieza() {
+        if (pieza == null) {
+            return null;
+        }
         Pieza piezaRemovida = this.pieza;
         this.pieza = null;
         return piezaRemovida;
     }
-
-    // Constructor
-    public Casilla(int fila, int columna) {
-        this.fila    = fila;
-        this.columna = columna;
-        this.pieza   = null; 
-    }
-
     
-    //sets y gets
+    /* SETTERS Y GETTERS */
+
     public int getFila() {
         return fila;
     }
+
+    public void setFila(int fila) {
+        this.fila = fila;
+    }
+
     public int getColumna() {
         return columna;
     }
+
+    public void setColumna(int columna) {
+        this.columna = columna;
+    }
+
     public Pieza getPieza() {
         return pieza;
     }
+
     public void setPieza(Pieza pieza) {
         this.pieza = pieza;
-    }
-    
-       public String getNotacionAlgebraica() {
-        return "" + LETRAS_COLUMNA[columna] + (fila + 1);
-    }
-
-    //Esto es para cuando usemos la interfaz y queramos imprimir se haga de mayor manera.
-
-    public String toString() {
-        String contenido = estaVacia() ? "vacía" : pieza.toString();
-        return String.format("Casilla[%s | %s]", getNotacionAlgebraica(), contenido);
     }
 }
