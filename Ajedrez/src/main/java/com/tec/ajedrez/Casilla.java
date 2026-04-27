@@ -9,10 +9,16 @@ public class Casilla {
     /* CONSTRUCTOR */
     
     public Casilla(int fila, int columna) {
+        if (fila < 0 || fila > 7) {
+            throw new IllegalArgumentException("La fila debe estar entre 0 y 7.");
+        }
+        if (columna < 0 || columna > 7) {
+            throw new IllegalArgumentException("La columna debe estar entre 0 y 7.");
+        }
         this.fila = fila;
         this.columna = columna;
         this.pieza = null;
-    }
+}
     
     /* METODOS */
 
