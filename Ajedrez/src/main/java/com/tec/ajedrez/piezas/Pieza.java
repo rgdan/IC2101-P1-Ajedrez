@@ -23,7 +23,7 @@ public abstract class Pieza {
     /* METODOS */
     
     public abstract boolean validarMovimiento(Casilla destino);
-
+    
     /* GETTER AND SETTERS */
     
     public Color getColor() {

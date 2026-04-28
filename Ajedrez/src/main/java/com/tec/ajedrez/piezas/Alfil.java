@@ -12,6 +12,7 @@ public class Alfil extends Pieza {
     
     @Override
     public boolean validarMovimiento(Casilla destino) {
+        
         // conseguir pos actual
         Casilla actual = getPosicionActual();
 
