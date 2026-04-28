@@ -20,5 +20,33 @@ public abstract class Pieza {
     /* METODOS */
     
     public abstract boolean validarMovimiento(Casilla destino);
+
+    /* GETTER AND SETTERS */
+    
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public Casilla getPosicionActual() {
+        return posicionActual;
+    }
+
+    public void setPosicionActual(Casilla posicionActual) {
+        this.posicionActual = posicionActual;
+    }
+
+    public boolean isEstaActiva() {
+        return estaActiva;
+    }
+
+    public void setEstaActiva(boolean estaActiva) {
+        this.estaActiva = estaActiva;
+    }
+    
+    
     
 }
