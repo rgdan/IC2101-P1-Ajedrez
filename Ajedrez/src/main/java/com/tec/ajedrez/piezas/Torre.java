@@ -1,4 +1,7 @@
-package com.tec.ajedrez;
+package com.tec.ajedrez.piezas;
+
+import com.tec.ajedrez.Casilla;
+import com.tec.ajedrez.enums.Color;
 
 public class Torre extends Pieza {
     

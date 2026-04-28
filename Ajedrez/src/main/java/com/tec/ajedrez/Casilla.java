@@ -1,5 +1,8 @@
 package com.tec.ajedrez;
 
+import com.tec.ajedrez.piezas.Pieza;
+import com.tec.ajedrez.enums.Color;
+
 public class Casilla {
 
     private int fila;
