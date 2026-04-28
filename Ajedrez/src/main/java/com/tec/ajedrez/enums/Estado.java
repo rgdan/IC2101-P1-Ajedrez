@@ -1,5 +1,5 @@
 
-package com.tec.ajedrez;
+package com.tec.ajedrez.enums;
 
 public enum Estado {
     EN_JUEGO,   

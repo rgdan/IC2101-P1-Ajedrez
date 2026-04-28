@@ -1,4 +1,4 @@
-package com.tec.ajedrez;
+package com.tec.ajedrez.enums;
 
 public enum Color {
     BLANCO, 
