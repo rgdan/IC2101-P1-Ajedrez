@@ -1,9 +1,7 @@
 package com.tec.ajedrez;
 
-import com.tec.ajedrez.enums.Color;
-import com.tec.ajedrez.enums.EstadoPartida;
-import com.tec.ajedrez.piezas.Caballo;
-import com.tec.ajedrez.piezas.Pieza;
+import com.tec.ajedrez.enums.*;
+import com.tec.ajedrez.piezas.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,8 +80,47 @@ public class Partida {
     public boolean esJaqueMate(Color color);
 
     // Método para promocionar un peón
-    public void promocionPeon(Pieza peon, String tipoPieza);
+    public void promocionPeon(Pieza peon, String tipoPieza) {
 
+        // verificar que sea peon
+        if (!(peon instanceof Peon)) {
+            throw new IllegalArgumentException("Error: Solo un Peón puede ser promocionado.");
+        }
+
+        Casilla posicionActual = peon.getPosicionActual();
+        int fila = posicionActual.getFila();
+
+        //validar que esté en fila correcta para ser promocionado
+        if (fila != 0 && fila != 7) {
+            throw new IllegalStateException("Error: El peón debe estar en la fila 0 o 7 para promocionar. Fila actual: " + fila);
+        }
+
+        Color colorPeon = peon.getColor();
+        Pieza nuevaPieza;
+
+        // encontrar a que pieza se quiere cambiar
+        switch (tipoPieza.toLowerCase()) {
+            case "reina":
+                nuevaPieza = new Reina(colorPeon, posicionActual, true);
+                break;
+            case "torre":
+                nuevaPieza = new Torre(colorPeon, posicionActual, true);
+                break;
+            case "alfil":
+                nuevaPieza = new Alfil(colorPeon, posicionActual, true);
+                break;
+            case "caballo":
+                nuevaPieza = new Caballo(colorPeon, posicionActual, true);
+                break;
+            default:
+                // si la opcion es rara
+                throw new IllegalArgumentException("Error: '" + tipoPieza + "' no es una pieza válida para promoción.");
+        }
+
+        // cambiar la pieza
+        posicionActual.setPieza(nuevaPieza);
+        peon.setEstaActiva(false);
+    }
     /* GETTERS */
     public Jugador getTurnoActual()      { return turnoActual; }
     public List<Movimiento> getHistorial() { return historial;  }
