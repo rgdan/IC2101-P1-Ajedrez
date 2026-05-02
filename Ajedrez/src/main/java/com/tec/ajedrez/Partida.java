@@ -71,8 +71,51 @@ public class Partida {
      * Revisa si el jugador está en jaque
      * @return true si el jugador está en jaque, false si no
      */
-    public boolean esJaque(Color color);
+    public boolean esJaque(Rey rey) {
+        // sacar pos del rey
+        Casilla casillaDelRey = rey.getPosicionActual();
+        Color colorDelRey = rey.getColor();
 
+        // revisar tablero entero para ver si alguna pieza puede atacar al rey
+        for (int fila = 0; fila < 8; fila++) {
+            for (int columna = 0; columna < 8; columna++) {
+
+                Casilla casillaAtacante = tablero.getCasilla(fila, columna);
+
+                // Si la casilla no está ocupada, continuar
+                if (!casillaAtacante.estaOcupada()) {
+                    continue;
+                }
+
+                Pieza piezaEnemiga = casillaAtacante.getPieza();
+
+                // Solo nos interesan las piezas del oponente
+                if (piezaEnemiga.getColor() == colorDelRey) {
+                    continue;
+                }
+
+                // Validar si el patrón de movimiento de la pieza llega al rey
+                if (!piezaEnemiga.validarMovimiento(casillaDelRey)) {
+                    continue;
+                }
+
+                // Si es caballo, no se revisa el camino
+                if (piezaEnemiga instanceof Caballo) {
+                    return true;
+                }
+
+                // Si no es caballo, verificar si el camino está libre
+                if (!tablero.caminoLibre(casillaAtacante, casillaDelRey)) {
+                    continue;
+                }
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+    
     /**
      * Revisa si el jugador está en jaque mate
      * @return true si el jugador está en jaque mate, false si no
