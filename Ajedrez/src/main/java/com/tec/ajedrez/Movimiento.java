@@ -20,11 +20,4 @@ public class Movimiento {
     public Casilla getDestino() { return destino; }
     public Pieza   getPieza()   { return pieza;   }
 
-    @Override
-    public String toString() {
-        return pieza.getClass().getSimpleName()
-             + " (" + origen.getFila()  + "," + origen.getColumna()  + ")"
-             + " -> "
-             + "("  + destino.getFila() + "," + destino.getColumna() + ")";
-    }
 }
