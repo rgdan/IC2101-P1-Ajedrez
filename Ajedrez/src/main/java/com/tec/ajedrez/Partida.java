@@ -120,7 +120,82 @@ public class Partida {
      * Revisa si el jugador está en jaque mate
      * @return true si el jugador está en jaque mate, false si no
      */
-    public boolean esJaqueMate(Color color);
+    public boolean esJaqueMate(Rey reyEnPeligro) {
+        
+        // si no esta en jaque, pues tampoco en jaque mate
+        if (esJaque(reyEnPeligro) == false) {
+            return false;
+        }
+
+        // color del rey acutal
+        Color colorDelRey = reyEnPeligro.getColor();
+
+        // verificar todo el tablero
+        for (int filaOrigen = 0; filaOrigen < 8; filaOrigen++) {
+            for (int columnaOrigen = 0; columnaOrigen < 8; columnaOrigen++) {
+
+                // get casilla
+                Casilla casillaOrigen = tablero.getCasilla(filaOrigen, columnaOrigen);
+
+                // si esta vacia, skip
+                if (casillaOrigen.estaOcupada() == false){
+                    continue;
+                }
+
+                Pieza miPieza = casillaOrigen.getPieza();
+                
+                // si no es una de mis piezas, skip
+                if (miPieza.getColor() != colorDelRey){
+                    continue;
+                }
+
+                // revisar cada casilla con pieza anterior
+                for (int filaDestino = 0; filaDestino < 8; filaDestino++) {
+                    for (int columnaDestino = 0; columnaDestino < 8; columnaDestino++) {
+
+                        Casilla casillaDestino = tablero.getCasilla(filaDestino, columnaDestino);
+
+                        // revisar si movimiento es valido
+                        if (miPieza.validarMovimiento(casillaDestino) == false){
+                            continue;
+                        }
+
+                        // revisar si hay camino libre
+                        boolean hayCaminoLibre = (miPieza instanceof Caballo) || tablero.caminoLibre(casillaOrigen, casillaDestino);
+                        
+                        if (hayCaminoLibre == false){
+                            continue;
+                        }
+
+                        // PROBAR MOVIMIENTO
+                        Pieza piezaOriginalEnDestino = casillaDestino.getPieza();
+                        Casilla posicionOriginalDeMiPieza = miPieza.getPosicionActual();
+
+                        // mover pieza
+                        casillaDestino.setPieza(miPieza);
+                        casillaOrigen.quitarPieza();
+                        miPieza.setPosicionActual(casillaDestino);
+
+                        // revisar si moviendo sigue en jaque
+                        boolean sigueEnJaque = esJaque(reyEnPeligro);
+
+                        // deshacer movimiento de prueba
+                        casillaOrigen.setPieza(miPieza);
+                        casillaDestino.setPieza(piezaOriginalEnDestino);
+                        miPieza.setPosicionActual(posicionOriginalDeMiPieza);
+
+                        // si se encuentra algun movimiento que salve al rey todavla no es jaque mate
+                        if (sigueEnJaque == false) {
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+
+        // si ya probamos todo, pues si es jaque mate
+        return true;
+    }
 
     // Método para promocionar un peón
     public void promocionPeon(Pieza peon, String tipoPieza) {
