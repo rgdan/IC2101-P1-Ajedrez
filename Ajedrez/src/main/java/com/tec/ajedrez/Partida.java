@@ -69,6 +69,21 @@ public class Partida {
         return true;
     }
 
+    /**
+     * Revisa si el jugador está en jaque
+     * @return true si el jugador está en jaque, false si no
+     */
+    public boolean esJaque(Color color);
+
+    /**
+     * Revisa si el jugador está en jaque mate
+     * @return true si el jugador está en jaque mate, false si no
+     */
+    public boolean esJaqueMate(Color color);
+
+    // Método para promocionar un peón
+    public void promocionPeon(Pieza peon, String tipoPieza);
+
     /* GETTERS */
     public Jugador getTurnoActual()      { return turnoActual; }
     public List<Movimiento> getHistorial() { return historial;  }
