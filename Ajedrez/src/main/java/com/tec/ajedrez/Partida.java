@@ -1,9 +1,7 @@
 package com.tec.ajedrez;
 
-import com.tec.ajedrez.enums.Color;
-import com.tec.ajedrez.enums.EstadoPartida;
-import com.tec.ajedrez.piezas.Caballo;
-import com.tec.ajedrez.piezas.Pieza;
+import com.tec.ajedrez.enums.*;
+import com.tec.ajedrez.piezas.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,6 +67,178 @@ public class Partida {
         return true;
     }
 
+    /**
+     * Revisa si el jugador está en jaque
+     * @return true si el jugador está en jaque, false si no
+     */
+    public boolean esJaque(Rey rey) {
+        // sacar pos del rey
+        Casilla casillaDelRey = rey.getPosicionActual();
+        Color colorDelRey = rey.getColor();
+
+        // revisar tablero entero para ver si alguna pieza puede atacar al rey
+        for (int fila = 0; fila < 8; fila++) {
+            for (int columna = 0; columna < 8; columna++) {
+
+                Casilla casillaAtacante = tablero.getCasilla(fila, columna);
+
+                // Si la casilla no está ocupada, continuar
+                if (!casillaAtacante.estaOcupada()) {
+                    continue;
+                }
+
+                Pieza piezaEnemiga = casillaAtacante.getPieza();
+
+                // Solo nos interesan las piezas del oponente
+                if (piezaEnemiga.getColor() == colorDelRey) {
+                    continue;
+                }
+
+                // Validar si el patrón de movimiento de la pieza llega al rey
+                if (!piezaEnemiga.validarMovimiento(casillaDelRey)) {
+                    continue;
+                }
+
+                // Si es caballo, no se revisa el camino
+                if (piezaEnemiga instanceof Caballo) {
+                    return true;
+                }
+
+                // Si no es caballo, verificar si el camino está libre
+                if (!tablero.caminoLibre(casillaAtacante, casillaDelRey)) {
+                    continue;
+                }
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+    
+    /**
+     * Revisa si el jugador está en jaque mate
+     * @return true si el jugador está en jaque mate, false si no
+     */
+    public boolean esJaqueMate(Rey reyEnPeligro) {
+        
+        // si no esta en jaque, pues tampoco en jaque mate
+        if (esJaque(reyEnPeligro) == false) {
+            return false;
+        }
+
+        // color del rey acutal
+        Color colorDelRey = reyEnPeligro.getColor();
+
+        // verificar todo el tablero
+        for (int filaOrigen = 0; filaOrigen < 8; filaOrigen++) {
+            for (int columnaOrigen = 0; columnaOrigen < 8; columnaOrigen++) {
+
+                // get casilla
+                Casilla casillaOrigen = tablero.getCasilla(filaOrigen, columnaOrigen);
+
+                // si esta vacia, skip
+                if (casillaOrigen.estaOcupada() == false){
+                    continue;
+                }
+
+                Pieza miPieza = casillaOrigen.getPieza();
+                
+                // si no es una de mis piezas, skip
+                if (miPieza.getColor() != colorDelRey){
+                    continue;
+                }
+
+                // revisar cada casilla con pieza anterior
+                for (int filaDestino = 0; filaDestino < 8; filaDestino++) {
+                    for (int columnaDestino = 0; columnaDestino < 8; columnaDestino++) {
+
+                        Casilla casillaDestino = tablero.getCasilla(filaDestino, columnaDestino);
+
+                        // revisar si movimiento es valido
+                        if (miPieza.validarMovimiento(casillaDestino) == false){
+                            continue;
+                        }
+
+                        // revisar si hay camino libre
+                        boolean hayCaminoLibre = (miPieza instanceof Caballo) || tablero.caminoLibre(casillaOrigen, casillaDestino);
+                        
+                        if (hayCaminoLibre == false){
+                            continue;
+                        }
+
+                        // PROBAR MOVIMIENTO
+                        Pieza piezaOriginalEnDestino = casillaDestino.getPieza();
+                        Casilla posicionOriginalDeMiPieza = miPieza.getPosicionActual();
+
+                        // mover pieza
+                        casillaDestino.setPieza(miPieza);
+                        casillaOrigen.quitarPieza();
+                        miPieza.setPosicionActual(casillaDestino);
+
+                        // revisar si moviendo sigue en jaque
+                        boolean sigueEnJaque = esJaque(reyEnPeligro);
+
+                        // deshacer movimiento de prueba
+                        casillaOrigen.setPieza(miPieza);
+                        casillaDestino.setPieza(piezaOriginalEnDestino);
+                        miPieza.setPosicionActual(posicionOriginalDeMiPieza);
+
+                        // si se encuentra algun movimiento que salve al rey todavla no es jaque mate
+                        if (sigueEnJaque == false) {
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+
+        // si ya probamos todo, pues si es jaque mate
+        return true;
+    }
+
+    // Método para promocionar un peón
+    public void promocionPeon(Pieza peon, String tipoPieza) {
+
+        // verificar que sea peon
+        if (!(peon instanceof Peon)) {
+            throw new IllegalArgumentException("Error: Solo un Peón puede ser promocionado.");
+        }
+
+        Casilla posicionActual = peon.getPosicionActual();
+        int fila = posicionActual.getFila();
+
+        //validar que esté en fila correcta para ser promocionado
+        if (fila != 0 && fila != 7) {
+            throw new IllegalStateException("Error: El peón debe estar en la fila 0 o 7 para promocionar. Fila actual: " + fila);
+        }
+
+        Color colorPeon = peon.getColor();
+        Pieza nuevaPieza;
+
+        // encontrar a que pieza se quiere cambiar
+        switch (tipoPieza.toLowerCase()) {
+            case "reina":
+                nuevaPieza = new Reina(colorPeon, posicionActual, true);
+                break;
+            case "torre":
+                nuevaPieza = new Torre(colorPeon, posicionActual, true);
+                break;
+            case "alfil":
+                nuevaPieza = new Alfil(colorPeon, posicionActual, true);
+                break;
+            case "caballo":
+                nuevaPieza = new Caballo(colorPeon, posicionActual, true);
+                break;
+            default:
+                // si la opcion es rara
+                throw new IllegalArgumentException("Error: '" + tipoPieza + "' no es una pieza válida para promoción.");
+        }
+
+        // cambiar la pieza
+        posicionActual.setPieza(nuevaPieza);
+        peon.setEstaActiva(false);
+    }
     /* GETTERS */
     public Jugador getTurnoActual()      { return turnoActual; }
     public List<Movimiento> getHistorial() { return historial;  }
