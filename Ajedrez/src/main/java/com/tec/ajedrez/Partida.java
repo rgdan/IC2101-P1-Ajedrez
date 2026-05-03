@@ -1,6 +1,7 @@
 package com.tec.ajedrez;
 
 import com.tec.ajedrez.enums.Color;
+import com.tec.ajedrez.enums.EstadoPartida;
 import com.tec.ajedrez.piezas.Caballo;
 import com.tec.ajedrez.piezas.Pieza;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ public class Partida {
     private Jugador jugadorNegro;
     private Jugador turnoActual;
     private List<Movimiento> historial;
+    private EstadoPartida estado;
 
     /* CONSTRUCTOR */
     public Partida(Jugador jugadorBlanco, Jugador jugadorNegro) {
@@ -71,4 +73,7 @@ public class Partida {
     public Jugador getTurnoActual()      { return turnoActual; }
     public List<Movimiento> getHistorial() { return historial;  }
     public Tablero getTablero()          { return tablero;     }
+
+    /* SETTERS */
+    public void setEstado(EstadoPartida estado) { this.estado = estado; }
 }
