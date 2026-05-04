@@ -3,8 +3,9 @@ package com.tec.ajedrez.piezas;
 
 import com.tec.ajedrez.Casilla;
 import com.tec.ajedrez.enums.Color;
+import java.io.Serializable;
 
-public abstract class Pieza {
+public abstract class Pieza implements Serializable {
     
     /* ATRIBUTOS */
     

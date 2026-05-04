@@ -4,7 +4,9 @@ package com.tec.ajedrez;
 import com.tec.ajedrez.enums.Color;
 import com.tec.ajedrez.enums.Estado;
 
-public class Jugador {
+import java.io.Serializable;
+
+public class Jugador implements Serializable {
 
     // Atributos
     private String nombre;

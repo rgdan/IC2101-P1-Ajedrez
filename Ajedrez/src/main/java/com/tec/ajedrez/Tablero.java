@@ -2,8 +2,9 @@ package com.tec.ajedrez;
 
 import com.tec.ajedrez.enums.Color;
 import com.tec.ajedrez.piezas.*;
+import java.io.Serializable;
 
-public class Tablero {
+public class Tablero implements Serializable {
 
     /* La matriz 8x8: tablero[fila][columna], fila 0 = lado blanco */
     private Casilla[][] casillas;

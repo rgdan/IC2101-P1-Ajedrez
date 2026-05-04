@@ -1,8 +1,9 @@
 package com.tec.ajedrez;
 
 import com.tec.ajedrez.piezas.Pieza;
+import java.io.Serializable;
 
-public class Movimiento {
+public class Movimiento implements Serializable {
 
     private Casilla origen;
     private Casilla destino;

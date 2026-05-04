@@ -4,9 +4,9 @@ import com.tec.ajedrez.enums.*;
 import com.tec.ajedrez.piezas.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
-public class Partida {
-
+public class Partida implements Serializable {
     private Tablero tablero;
     private Jugador jugadorBlanco;
     private Jugador jugadorNegro;

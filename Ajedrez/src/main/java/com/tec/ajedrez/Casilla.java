@@ -2,8 +2,9 @@ package com.tec.ajedrez;
 
 import com.tec.ajedrez.piezas.Pieza;
 import com.tec.ajedrez.enums.Color;
+import java.io.Serializable;
 
-public class Casilla {
+public class Casilla implements Serializable{
 
     private int fila;
     private int columna;
