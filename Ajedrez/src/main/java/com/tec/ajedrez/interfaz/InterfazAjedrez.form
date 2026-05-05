@@ -23,339 +23,351 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelTablero" alignment="0" max="32767" attributes="0"/>
+          <Component id="panelTablero" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelTablero" alignment="0" max="32767" attributes="0"/>
+          <Component id="panelTablero" min="-2" pref="636" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="panelTablero">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="14" green="c8" red="c8" type="rgb"/>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[4000, 600]"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
         <Property name="columns" type="int" value="8"/>
         <Property name="rows" type="int" value="8"/>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="casilla00">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="casilla01">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton2"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="casilla02">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton3"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="casilla02ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton25">
+        <Component class="javax.swing.JButton" name="casilla03">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton25"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="casilla04">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="casilla05">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton5"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton7">
+        <Component class="javax.swing.JButton" name="casilla06">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton7"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton8">
+        <Component class="javax.swing.JButton" name="casilla07">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton8"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton9">
+        <Component class="javax.swing.JButton" name="casilla10">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton9"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton11">
+        <Component class="javax.swing.JButton" name="casilla11">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton11"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton12">
+        <Component class="javax.swing.JButton" name="casilla12">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton12"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton6">
+        <Component class="javax.swing.JButton" name="casilla13">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton6"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton21">
+        <Component class="javax.swing.JButton" name="casilla14">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton21"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton14">
+        <Component class="javax.swing.JButton" name="casilla15">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton14"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton23">
+        <Component class="javax.swing.JButton" name="casilla16">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton23"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton22">
+        <Component class="javax.swing.JButton" name="casilla17">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton22"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton17">
+        <Component class="javax.swing.JButton" name="casilla20">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton17"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton20">
+        <Component class="javax.swing.JButton" name="casilla21">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton20"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton19">
+        <Component class="javax.swing.JButton" name="casilla22">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton19"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton18">
+        <Component class="javax.swing.JButton" name="casilla23">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton18"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton16">
+        <Component class="javax.swing.JButton" name="casilla24">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton16"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton15">
+        <Component class="javax.swing.JButton" name="casilla25">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton15"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton13">
+        <Component class="javax.swing.JButton" name="casilla26">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton13"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton10">
+        <Component class="javax.swing.JButton" name="casilla27">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton10"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton24">
+        <Component class="javax.swing.JButton" name="casilla30">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton24"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton26">
+        <Component class="javax.swing.JButton" name="casilla31">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton26"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton27">
+        <Component class="javax.swing.JButton" name="casilla32">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton27"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton28">
+        <Component class="javax.swing.JButton" name="casilla33">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton28"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton32">
+        <Component class="javax.swing.JButton" name="casilla34">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton32"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton34">
+        <Component class="javax.swing.JButton" name="casilla35">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton34"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton29">
+        <Component class="javax.swing.JButton" name="casilla36">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton29"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton30">
+        <Component class="javax.swing.JButton" name="casilla37">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton30"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton31">
+        <Component class="javax.swing.JButton" name="casilla40">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton31"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton33">
+        <Component class="javax.swing.JButton" name="casilla41">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton33"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton39">
+        <Component class="javax.swing.JButton" name="casilla42">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton39"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton35">
+        <Component class="javax.swing.JButton" name="casilla43">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton35"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton36">
+        <Component class="javax.swing.JButton" name="casilla44">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton36"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton37">
+        <Component class="javax.swing.JButton" name="casilla45">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton37"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton38">
+        <Component class="javax.swing.JButton" name="casilla46">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton38"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton43">
+        <Component class="javax.swing.JButton" name="casilla47">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton43"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton41">
+        <Component class="javax.swing.JButton" name="casilla50">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton41"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton40">
+        <Component class="javax.swing.JButton" name="casilla51">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton40"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton42">
+        <Component class="javax.swing.JButton" name="casilla52">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton42"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton44">
+        <Component class="javax.swing.JButton" name="casilla53">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton44"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton45">
+        <Component class="javax.swing.JButton" name="casilla54">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton45"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton46">
+        <Component class="javax.swing.JButton" name="casilla55">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton46"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton47">
+        <Component class="javax.swing.JButton" name="casilla56">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton47"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton49">
+        <Component class="javax.swing.JButton" name="casilla57">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton49"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton48">
+        <Component class="javax.swing.JButton" name="casilla60">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton48"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton50">
+        <Component class="javax.swing.JButton" name="casilla61">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton50"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton51">
+        <Component class="javax.swing.JButton" name="casilla62">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton51"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton52">
+        <Component class="javax.swing.JButton" name="casilla63">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton52"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton53">
+        <Component class="javax.swing.JButton" name="casilla64">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton53"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton54">
+        <Component class="javax.swing.JButton" name="casilla65">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton54"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton55">
+        <Component class="javax.swing.JButton" name="casilla66">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton55"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton57">
+        <Component class="javax.swing.JButton" name="casilla67">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton57"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton56">
+        <Component class="javax.swing.JButton" name="casilla70">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton56"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton58">
+        <Component class="javax.swing.JButton" name="casilla71">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton58"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton59">
+        <Component class="javax.swing.JButton" name="casilla72">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton59"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton60">
+        <Component class="javax.swing.JButton" name="casilla73">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton60"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton61">
+        <Component class="javax.swing.JButton" name="casilla74">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton61"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton62">
+        <Component class="javax.swing.JButton" name="casilla75">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton62"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton63">
+        <Component class="javax.swing.JButton" name="casilla76">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton63"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton64">
+        <Component class="javax.swing.JButton" name="casilla77">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton64"/>
           </Properties>

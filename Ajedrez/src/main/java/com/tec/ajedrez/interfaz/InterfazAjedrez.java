@@ -30,349 +30,361 @@ public class InterfazAjedrez extends javax.swing.JFrame {
     private void initComponents() {
 
         panelTablero = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
-        jButton34 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
-        jButton33 = new javax.swing.JButton();
-        jButton39 = new javax.swing.JButton();
-        jButton35 = new javax.swing.JButton();
-        jButton36 = new javax.swing.JButton();
-        jButton37 = new javax.swing.JButton();
-        jButton38 = new javax.swing.JButton();
-        jButton43 = new javax.swing.JButton();
-        jButton41 = new javax.swing.JButton();
-        jButton40 = new javax.swing.JButton();
-        jButton42 = new javax.swing.JButton();
-        jButton44 = new javax.swing.JButton();
-        jButton45 = new javax.swing.JButton();
-        jButton46 = new javax.swing.JButton();
-        jButton47 = new javax.swing.JButton();
-        jButton49 = new javax.swing.JButton();
-        jButton48 = new javax.swing.JButton();
-        jButton50 = new javax.swing.JButton();
-        jButton51 = new javax.swing.JButton();
-        jButton52 = new javax.swing.JButton();
-        jButton53 = new javax.swing.JButton();
-        jButton54 = new javax.swing.JButton();
-        jButton55 = new javax.swing.JButton();
-        jButton57 = new javax.swing.JButton();
-        jButton56 = new javax.swing.JButton();
-        jButton58 = new javax.swing.JButton();
-        jButton59 = new javax.swing.JButton();
-        jButton60 = new javax.swing.JButton();
-        jButton61 = new javax.swing.JButton();
-        jButton62 = new javax.swing.JButton();
-        jButton63 = new javax.swing.JButton();
-        jButton64 = new javax.swing.JButton();
+        casilla00 = new javax.swing.JButton();
+        casilla01 = new javax.swing.JButton();
+        casilla02 = new javax.swing.JButton();
+        casilla03 = new javax.swing.JButton();
+        casilla04 = new javax.swing.JButton();
+        casilla05 = new javax.swing.JButton();
+        casilla06 = new javax.swing.JButton();
+        casilla07 = new javax.swing.JButton();
+        casilla10 = new javax.swing.JButton();
+        casilla11 = new javax.swing.JButton();
+        casilla12 = new javax.swing.JButton();
+        casilla13 = new javax.swing.JButton();
+        casilla14 = new javax.swing.JButton();
+        casilla15 = new javax.swing.JButton();
+        casilla16 = new javax.swing.JButton();
+        casilla17 = new javax.swing.JButton();
+        casilla20 = new javax.swing.JButton();
+        casilla21 = new javax.swing.JButton();
+        casilla22 = new javax.swing.JButton();
+        casilla23 = new javax.swing.JButton();
+        casilla24 = new javax.swing.JButton();
+        casilla25 = new javax.swing.JButton();
+        casilla26 = new javax.swing.JButton();
+        casilla27 = new javax.swing.JButton();
+        casilla30 = new javax.swing.JButton();
+        casilla31 = new javax.swing.JButton();
+        casilla32 = new javax.swing.JButton();
+        casilla33 = new javax.swing.JButton();
+        casilla34 = new javax.swing.JButton();
+        casilla35 = new javax.swing.JButton();
+        casilla36 = new javax.swing.JButton();
+        casilla37 = new javax.swing.JButton();
+        casilla40 = new javax.swing.JButton();
+        casilla41 = new javax.swing.JButton();
+        casilla42 = new javax.swing.JButton();
+        casilla43 = new javax.swing.JButton();
+        casilla44 = new javax.swing.JButton();
+        casilla45 = new javax.swing.JButton();
+        casilla46 = new javax.swing.JButton();
+        casilla47 = new javax.swing.JButton();
+        casilla50 = new javax.swing.JButton();
+        casilla51 = new javax.swing.JButton();
+        casilla52 = new javax.swing.JButton();
+        casilla53 = new javax.swing.JButton();
+        casilla54 = new javax.swing.JButton();
+        casilla55 = new javax.swing.JButton();
+        casilla56 = new javax.swing.JButton();
+        casilla57 = new javax.swing.JButton();
+        casilla60 = new javax.swing.JButton();
+        casilla61 = new javax.swing.JButton();
+        casilla62 = new javax.swing.JButton();
+        casilla63 = new javax.swing.JButton();
+        casilla64 = new javax.swing.JButton();
+        casilla65 = new javax.swing.JButton();
+        casilla66 = new javax.swing.JButton();
+        casilla67 = new javax.swing.JButton();
+        casilla70 = new javax.swing.JButton();
+        casilla71 = new javax.swing.JButton();
+        casilla72 = new javax.swing.JButton();
+        casilla73 = new javax.swing.JButton();
+        casilla74 = new javax.swing.JButton();
+        casilla75 = new javax.swing.JButton();
+        casilla76 = new javax.swing.JButton();
+        casilla77 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        panelTablero.setBackground(new java.awt.Color(200, 200, 20));
+        panelTablero.setToolTipText("");
+        panelTablero.setPreferredSize(new java.awt.Dimension(4000, 600));
         panelTablero.setLayout(new java.awt.GridLayout(8, 8));
 
-        jButton1.setText("jButton1");
-        panelTablero.add(jButton1);
+        casilla00.setText("jButton1");
+        panelTablero.add(casilla00);
 
-        jButton2.setText("jButton2");
-        panelTablero.add(jButton2);
+        casilla01.setText("jButton2");
+        panelTablero.add(casilla01);
 
-        jButton3.setText("jButton3");
-        panelTablero.add(jButton3);
+        casilla02.setText("jButton3");
+        casilla02.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                casilla02ActionPerformed(evt);
+            }
+        });
+        panelTablero.add(casilla02);
 
-        jButton25.setText("jButton25");
-        panelTablero.add(jButton25);
+        casilla03.setText("jButton25");
+        panelTablero.add(casilla03);
 
-        jButton4.setText("jButton4");
-        panelTablero.add(jButton4);
+        casilla04.setText("jButton4");
+        panelTablero.add(casilla04);
 
-        jButton5.setText("jButton5");
-        panelTablero.add(jButton5);
+        casilla05.setText("jButton5");
+        panelTablero.add(casilla05);
 
-        jButton7.setText("jButton7");
-        panelTablero.add(jButton7);
+        casilla06.setText("jButton7");
+        panelTablero.add(casilla06);
 
-        jButton8.setText("jButton8");
-        panelTablero.add(jButton8);
+        casilla07.setText("jButton8");
+        panelTablero.add(casilla07);
 
-        jButton9.setText("jButton9");
-        panelTablero.add(jButton9);
+        casilla10.setText("jButton9");
+        panelTablero.add(casilla10);
 
-        jButton11.setText("jButton11");
-        panelTablero.add(jButton11);
+        casilla11.setText("jButton11");
+        panelTablero.add(casilla11);
 
-        jButton12.setText("jButton12");
-        panelTablero.add(jButton12);
+        casilla12.setText("jButton12");
+        panelTablero.add(casilla12);
 
-        jButton6.setText("jButton6");
-        panelTablero.add(jButton6);
+        casilla13.setText("jButton6");
+        panelTablero.add(casilla13);
 
-        jButton21.setText("jButton21");
-        panelTablero.add(jButton21);
+        casilla14.setText("jButton21");
+        panelTablero.add(casilla14);
 
-        jButton14.setText("jButton14");
-        panelTablero.add(jButton14);
+        casilla15.setText("jButton14");
+        panelTablero.add(casilla15);
 
-        jButton23.setText("jButton23");
-        panelTablero.add(jButton23);
+        casilla16.setText("jButton23");
+        panelTablero.add(casilla16);
 
-        jButton22.setText("jButton22");
-        panelTablero.add(jButton22);
+        casilla17.setText("jButton22");
+        panelTablero.add(casilla17);
 
-        jButton17.setText("jButton17");
-        panelTablero.add(jButton17);
+        casilla20.setText("jButton17");
+        panelTablero.add(casilla20);
 
-        jButton20.setText("jButton20");
-        panelTablero.add(jButton20);
+        casilla21.setText("jButton20");
+        panelTablero.add(casilla21);
 
-        jButton19.setText("jButton19");
-        panelTablero.add(jButton19);
+        casilla22.setText("jButton19");
+        panelTablero.add(casilla22);
 
-        jButton18.setText("jButton18");
-        panelTablero.add(jButton18);
+        casilla23.setText("jButton18");
+        panelTablero.add(casilla23);
 
-        jButton16.setText("jButton16");
-        panelTablero.add(jButton16);
+        casilla24.setText("jButton16");
+        panelTablero.add(casilla24);
 
-        jButton15.setText("jButton15");
-        panelTablero.add(jButton15);
+        casilla25.setText("jButton15");
+        panelTablero.add(casilla25);
 
-        jButton13.setText("jButton13");
-        panelTablero.add(jButton13);
+        casilla26.setText("jButton13");
+        panelTablero.add(casilla26);
 
-        jButton10.setText("jButton10");
-        panelTablero.add(jButton10);
+        casilla27.setText("jButton10");
+        panelTablero.add(casilla27);
 
-        jButton24.setText("jButton24");
-        panelTablero.add(jButton24);
+        casilla30.setText("jButton24");
+        panelTablero.add(casilla30);
 
-        jButton26.setText("jButton26");
-        panelTablero.add(jButton26);
+        casilla31.setText("jButton26");
+        panelTablero.add(casilla31);
 
-        jButton27.setText("jButton27");
-        panelTablero.add(jButton27);
+        casilla32.setText("jButton27");
+        panelTablero.add(casilla32);
 
-        jButton28.setText("jButton28");
-        panelTablero.add(jButton28);
+        casilla33.setText("jButton28");
+        panelTablero.add(casilla33);
 
-        jButton32.setText("jButton32");
-        panelTablero.add(jButton32);
+        casilla34.setText("jButton32");
+        panelTablero.add(casilla34);
 
-        jButton34.setText("jButton34");
-        panelTablero.add(jButton34);
+        casilla35.setText("jButton34");
+        panelTablero.add(casilla35);
 
-        jButton29.setText("jButton29");
-        panelTablero.add(jButton29);
+        casilla36.setText("jButton29");
+        panelTablero.add(casilla36);
 
-        jButton30.setText("jButton30");
-        panelTablero.add(jButton30);
+        casilla37.setText("jButton30");
+        panelTablero.add(casilla37);
 
-        jButton31.setText("jButton31");
-        panelTablero.add(jButton31);
+        casilla40.setText("jButton31");
+        panelTablero.add(casilla40);
 
-        jButton33.setText("jButton33");
-        panelTablero.add(jButton33);
+        casilla41.setText("jButton33");
+        panelTablero.add(casilla41);
 
-        jButton39.setText("jButton39");
-        panelTablero.add(jButton39);
+        casilla42.setText("jButton39");
+        panelTablero.add(casilla42);
 
-        jButton35.setText("jButton35");
-        panelTablero.add(jButton35);
+        casilla43.setText("jButton35");
+        panelTablero.add(casilla43);
 
-        jButton36.setText("jButton36");
-        panelTablero.add(jButton36);
+        casilla44.setText("jButton36");
+        panelTablero.add(casilla44);
 
-        jButton37.setText("jButton37");
-        panelTablero.add(jButton37);
+        casilla45.setText("jButton37");
+        panelTablero.add(casilla45);
 
-        jButton38.setText("jButton38");
-        panelTablero.add(jButton38);
+        casilla46.setText("jButton38");
+        panelTablero.add(casilla46);
 
-        jButton43.setText("jButton43");
-        panelTablero.add(jButton43);
+        casilla47.setText("jButton43");
+        panelTablero.add(casilla47);
 
-        jButton41.setText("jButton41");
-        panelTablero.add(jButton41);
+        casilla50.setText("jButton41");
+        panelTablero.add(casilla50);
 
-        jButton40.setText("jButton40");
-        panelTablero.add(jButton40);
+        casilla51.setText("jButton40");
+        panelTablero.add(casilla51);
 
-        jButton42.setText("jButton42");
-        panelTablero.add(jButton42);
+        casilla52.setText("jButton42");
+        panelTablero.add(casilla52);
 
-        jButton44.setText("jButton44");
-        panelTablero.add(jButton44);
+        casilla53.setText("jButton44");
+        panelTablero.add(casilla53);
 
-        jButton45.setText("jButton45");
-        panelTablero.add(jButton45);
+        casilla54.setText("jButton45");
+        panelTablero.add(casilla54);
 
-        jButton46.setText("jButton46");
-        panelTablero.add(jButton46);
+        casilla55.setText("jButton46");
+        panelTablero.add(casilla55);
 
-        jButton47.setText("jButton47");
-        panelTablero.add(jButton47);
+        casilla56.setText("jButton47");
+        panelTablero.add(casilla56);
 
-        jButton49.setText("jButton49");
-        panelTablero.add(jButton49);
+        casilla57.setText("jButton49");
+        panelTablero.add(casilla57);
 
-        jButton48.setText("jButton48");
-        panelTablero.add(jButton48);
+        casilla60.setText("jButton48");
+        panelTablero.add(casilla60);
 
-        jButton50.setText("jButton50");
-        panelTablero.add(jButton50);
+        casilla61.setText("jButton50");
+        panelTablero.add(casilla61);
 
-        jButton51.setText("jButton51");
-        panelTablero.add(jButton51);
+        casilla62.setText("jButton51");
+        panelTablero.add(casilla62);
 
-        jButton52.setText("jButton52");
-        panelTablero.add(jButton52);
+        casilla63.setText("jButton52");
+        panelTablero.add(casilla63);
 
-        jButton53.setText("jButton53");
-        panelTablero.add(jButton53);
+        casilla64.setText("jButton53");
+        panelTablero.add(casilla64);
 
-        jButton54.setText("jButton54");
-        panelTablero.add(jButton54);
+        casilla65.setText("jButton54");
+        panelTablero.add(casilla65);
 
-        jButton55.setText("jButton55");
-        panelTablero.add(jButton55);
+        casilla66.setText("jButton55");
+        panelTablero.add(casilla66);
 
-        jButton57.setText("jButton57");
-        panelTablero.add(jButton57);
+        casilla67.setText("jButton57");
+        panelTablero.add(casilla67);
 
-        jButton56.setText("jButton56");
-        panelTablero.add(jButton56);
+        casilla70.setText("jButton56");
+        panelTablero.add(casilla70);
 
-        jButton58.setText("jButton58");
-        panelTablero.add(jButton58);
+        casilla71.setText("jButton58");
+        panelTablero.add(casilla71);
 
-        jButton59.setText("jButton59");
-        panelTablero.add(jButton59);
+        casilla72.setText("jButton59");
+        panelTablero.add(casilla72);
 
-        jButton60.setText("jButton60");
-        panelTablero.add(jButton60);
+        casilla73.setText("jButton60");
+        panelTablero.add(casilla73);
 
-        jButton61.setText("jButton61");
-        panelTablero.add(jButton61);
+        casilla74.setText("jButton61");
+        panelTablero.add(casilla74);
 
-        jButton62.setText("jButton62");
-        panelTablero.add(jButton62);
+        casilla75.setText("jButton62");
+        panelTablero.add(casilla75);
 
-        jButton63.setText("jButton63");
-        panelTablero.add(jButton63);
+        casilla76.setText("jButton63");
+        panelTablero.add(casilla76);
 
-        jButton64.setText("jButton64");
-        panelTablero.add(jButton64);
+        casilla77.setText("jButton64");
+        panelTablero.add(casilla77);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelTablero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelTablero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelTablero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelTablero, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void casilla02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casilla02ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_casilla02ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton36;
-    private javax.swing.JButton jButton37;
-    private javax.swing.JButton jButton38;
-    private javax.swing.JButton jButton39;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton40;
-    private javax.swing.JButton jButton41;
-    private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton43;
-    private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton45;
-    private javax.swing.JButton jButton46;
-    private javax.swing.JButton jButton47;
-    private javax.swing.JButton jButton48;
-    private javax.swing.JButton jButton49;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton50;
-    private javax.swing.JButton jButton51;
-    private javax.swing.JButton jButton52;
-    private javax.swing.JButton jButton53;
-    private javax.swing.JButton jButton54;
-    private javax.swing.JButton jButton55;
-    private javax.swing.JButton jButton56;
-    private javax.swing.JButton jButton57;
-    private javax.swing.JButton jButton58;
-    private javax.swing.JButton jButton59;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton60;
-    private javax.swing.JButton jButton61;
-    private javax.swing.JButton jButton62;
-    private javax.swing.JButton jButton63;
-    private javax.swing.JButton jButton64;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton casilla00;
+    private javax.swing.JButton casilla01;
+    private javax.swing.JButton casilla02;
+    private javax.swing.JButton casilla03;
+    private javax.swing.JButton casilla04;
+    private javax.swing.JButton casilla05;
+    private javax.swing.JButton casilla06;
+    private javax.swing.JButton casilla07;
+    private javax.swing.JButton casilla10;
+    private javax.swing.JButton casilla11;
+    private javax.swing.JButton casilla12;
+    private javax.swing.JButton casilla13;
+    private javax.swing.JButton casilla14;
+    private javax.swing.JButton casilla15;
+    private javax.swing.JButton casilla16;
+    private javax.swing.JButton casilla17;
+    private javax.swing.JButton casilla20;
+    private javax.swing.JButton casilla21;
+    private javax.swing.JButton casilla22;
+    private javax.swing.JButton casilla23;
+    private javax.swing.JButton casilla24;
+    private javax.swing.JButton casilla25;
+    private javax.swing.JButton casilla26;
+    private javax.swing.JButton casilla27;
+    private javax.swing.JButton casilla30;
+    private javax.swing.JButton casilla31;
+    private javax.swing.JButton casilla32;
+    private javax.swing.JButton casilla33;
+    private javax.swing.JButton casilla34;
+    private javax.swing.JButton casilla35;
+    private javax.swing.JButton casilla36;
+    private javax.swing.JButton casilla37;
+    private javax.swing.JButton casilla40;
+    private javax.swing.JButton casilla41;
+    private javax.swing.JButton casilla42;
+    private javax.swing.JButton casilla43;
+    private javax.swing.JButton casilla44;
+    private javax.swing.JButton casilla45;
+    private javax.swing.JButton casilla46;
+    private javax.swing.JButton casilla47;
+    private javax.swing.JButton casilla50;
+    private javax.swing.JButton casilla51;
+    private javax.swing.JButton casilla52;
+    private javax.swing.JButton casilla53;
+    private javax.swing.JButton casilla54;
+    private javax.swing.JButton casilla55;
+    private javax.swing.JButton casilla56;
+    private javax.swing.JButton casilla57;
+    private javax.swing.JButton casilla60;
+    private javax.swing.JButton casilla61;
+    private javax.swing.JButton casilla62;
+    private javax.swing.JButton casilla63;
+    private javax.swing.JButton casilla64;
+    private javax.swing.JButton casilla65;
+    private javax.swing.JButton casilla66;
+    private javax.swing.JButton casilla67;
+    private javax.swing.JButton casilla70;
+    private javax.swing.JButton casilla71;
+    private javax.swing.JButton casilla72;
+    private javax.swing.JButton casilla73;
+    private javax.swing.JButton casilla74;
+    private javax.swing.JButton casilla75;
+    private javax.swing.JButton casilla76;
+    private javax.swing.JButton casilla77;
     private javax.swing.JPanel panelTablero;
     // End of variables declaration//GEN-END:variables
 }
