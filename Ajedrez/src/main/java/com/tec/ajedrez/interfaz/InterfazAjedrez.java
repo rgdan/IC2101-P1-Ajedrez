@@ -17,7 +17,7 @@ public class InterfazAjedrez extends javax.swing.JFrame {
      */
     public InterfazAjedrez() {
         initComponents();
-        
+        configurarVista();
     }
 
     /**
@@ -312,7 +312,60 @@ public class InterfazAjedrez extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    private javax.swing.JTextArea areaMovimientos;
 
+private void configurarVista() {
+    getContentPane().removeAll();
+    getContentPane().setLayout(new java.awt.BorderLayout());
+
+    panelTablero.setPreferredSize(new java.awt.Dimension(640, 640));
+
+    javax.swing.JPanel panelHistorial = new javax.swing.JPanel();
+    panelHistorial.setPreferredSize(new java.awt.Dimension(220, 640));
+    panelHistorial.setLayout(new java.awt.BorderLayout());
+
+    javax.swing.JLabel titulo = new javax.swing.JLabel("Movimientos");
+    titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+    areaMovimientos = new javax.swing.JTextArea();
+    areaMovimientos.setEditable(false);
+
+    javax.swing.JScrollPane scroll = new javax.swing.JScrollPane(areaMovimientos);
+
+    panelHistorial.add(titulo, java.awt.BorderLayout.NORTH);
+    panelHistorial.add(scroll, java.awt.BorderLayout.CENTER);
+
+    getContentPane().add(panelTablero, java.awt.BorderLayout.CENTER);
+    getContentPane().add(panelHistorial, java.awt.BorderLayout.EAST);
+
+    pack();
+    setLocationRelativeTo(null);
+    // panel inferior para informacion y botones
+    javax.swing.JPanel panelInferior = new javax.swing.JPanel();
+
+    // texto del turno actual
+    javax.swing.JLabel labelTurno = new javax.swing.JLabel("Turno: Blanco");
+
+    // texto del estado de la partida
+    javax.swing.JLabel labelEstado = new javax.swing.JLabel("Estado: En juego");
+
+    // botones
+    javax.swing.JButton btnGuardar = new javax.swing.JButton("Guardar");
+    javax.swing.JButton btnCargar = new javax.swing.JButton("Cargar");
+
+    // agrega los elementos al panel inferior
+    panelInferior.add(labelTurno);
+    panelInferior.add(labelEstado);
+    panelInferior.add(btnGuardar);
+    panelInferior.add(btnCargar);
+
+    // agrega el panel abajo de la ventana
+    getContentPane().add(panelInferior, java.awt.BorderLayout.SOUTH);
+}
+
+private void registrarMovimiento(String movimiento) {
+    areaMovimientos.append(movimiento + "\n");
+}
     private void casilla02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casilla02ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_casilla02ActionPerformed
