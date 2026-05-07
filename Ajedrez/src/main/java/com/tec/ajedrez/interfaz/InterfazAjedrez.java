@@ -97,18 +97,30 @@ public class InterfazAjedrez extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panelTablero.setBackground(new java.awt.Color(200, 200, 20));
+        panelTablero.setBackground(new java.awt.Color(255, 255, 255));
         panelTablero.setToolTipText("");
         panelTablero.setPreferredSize(new java.awt.Dimension(4000, 600));
         panelTablero.setLayout(new java.awt.GridLayout(8, 8));
 
-        casilla00.setText("jButton1");
+        casilla00.setBackground(new java.awt.Color(240, 217, 181));
+        casilla00.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla00.setText("♖");
+        casilla00.setToolTipText("");
+        casilla00.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                casilla00ActionPerformed(evt);
+            }
+        });
         panelTablero.add(casilla00);
 
-        casilla01.setText("jButton2");
+        casilla01.setBackground(new java.awt.Color(181, 136, 99));
+        casilla01.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla01.setText(" ♘");
         panelTablero.add(casilla01);
 
-        casilla02.setText("jButton3");
+        casilla02.setBackground(new java.awt.Color(240, 217, 181));
+        casilla02.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla02.setText("♗");
         casilla02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 casilla02ActionPerformed(evt);
@@ -116,187 +128,284 @@ public class InterfazAjedrez extends javax.swing.JFrame {
         });
         panelTablero.add(casilla02);
 
-        casilla03.setText("jButton25");
+        casilla03.setBackground(new java.awt.Color(181, 136, 99));
+        casilla03.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla03.setText(" ♕");
         panelTablero.add(casilla03);
 
-        casilla04.setText("jButton4");
+        casilla04.setBackground(new java.awt.Color(240, 217, 181));
+        casilla04.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla04.setText(" ♔");
         panelTablero.add(casilla04);
 
-        casilla05.setText("jButton5");
+        casilla05.setBackground(new java.awt.Color(181, 136, 99));
+        casilla05.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla05.setText("♗");
         panelTablero.add(casilla05);
 
-        casilla06.setText("jButton7");
+        casilla06.setBackground(new java.awt.Color(240, 217, 181));
+        casilla06.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla06.setText("♘");
         panelTablero.add(casilla06);
 
-        casilla07.setText("jButton8");
+        casilla07.setBackground(new java.awt.Color(181, 136, 99));
+        casilla07.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla07.setText("♖");
+        casilla07.setToolTipText("");
         panelTablero.add(casilla07);
 
-        casilla10.setText("jButton9");
+        casilla10.setBackground(new java.awt.Color(181, 136, 99));
+        casilla10.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla10.setText("♙");
         panelTablero.add(casilla10);
 
-        casilla11.setText("jButton11");
+        casilla11.setBackground(new java.awt.Color(240, 217, 181));
+        casilla11.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla11.setText("♙");
         panelTablero.add(casilla11);
 
-        casilla12.setText("jButton12");
+        casilla12.setBackground(new java.awt.Color(181, 136, 99));
+        casilla12.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla12.setText("♙");
         panelTablero.add(casilla12);
 
-        casilla13.setText("jButton6");
+        casilla13.setBackground(new java.awt.Color(240, 217, 181));
+        casilla13.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla13.setText("♙");
         panelTablero.add(casilla13);
 
-        casilla14.setText("jButton21");
+        casilla14.setBackground(new java.awt.Color(181, 136, 99));
+        casilla14.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla14.setText("♙");
         panelTablero.add(casilla14);
 
-        casilla15.setText("jButton14");
+        casilla15.setBackground(new java.awt.Color(240, 217, 181));
+        casilla15.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla15.setText(" ♙");
         panelTablero.add(casilla15);
 
-        casilla16.setText("jButton23");
+        casilla16.setBackground(new java.awt.Color(181, 136, 99));
+        casilla16.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla16.setText("♙");
         panelTablero.add(casilla16);
 
-        casilla17.setText("jButton22");
+        casilla17.setBackground(new java.awt.Color(240, 217, 181));
+        casilla17.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla17.setText(" ♙");
         panelTablero.add(casilla17);
 
-        casilla20.setText("jButton17");
+        casilla20.setBackground(new java.awt.Color(240, 217, 181));
+        casilla20.setText(" ");
         panelTablero.add(casilla20);
 
-        casilla21.setText("jButton20");
+        casilla21.setBackground(new java.awt.Color(181, 136, 99));
+        casilla21.setText(" ");
         panelTablero.add(casilla21);
 
-        casilla22.setText("jButton19");
+        casilla22.setBackground(new java.awt.Color(240, 217, 181));
+        casilla22.setText(" ");
+        casilla22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                casilla22ActionPerformed(evt);
+            }
+        });
         panelTablero.add(casilla22);
 
-        casilla23.setText("jButton18");
+        casilla23.setBackground(new java.awt.Color(181, 136, 99));
+        casilla23.setText(" ");
+        casilla23.setToolTipText("");
         panelTablero.add(casilla23);
 
-        casilla24.setText("jButton16");
+        casilla24.setBackground(new java.awt.Color(240, 217, 181));
+        casilla24.setText(" ");
         panelTablero.add(casilla24);
 
-        casilla25.setText("jButton15");
+        casilla25.setBackground(new java.awt.Color(181, 136, 99));
+        casilla25.setText(" ");
         panelTablero.add(casilla25);
 
-        casilla26.setText("jButton13");
+        casilla26.setBackground(new java.awt.Color(240, 217, 181));
+        casilla26.setText(" ");
         panelTablero.add(casilla26);
 
-        casilla27.setText("jButton10");
+        casilla27.setBackground(new java.awt.Color(181, 136, 99));
+        casilla27.setText(" ");
         panelTablero.add(casilla27);
 
-        casilla30.setText("jButton24");
+        casilla30.setBackground(new java.awt.Color(181, 136, 99));
+        casilla30.setText(" ");
         panelTablero.add(casilla30);
 
-        casilla31.setText("jButton26");
+        casilla31.setBackground(new java.awt.Color(240, 217, 181));
+        casilla31.setText(" ");
         panelTablero.add(casilla31);
 
-        casilla32.setText("jButton27");
+        casilla32.setBackground(new java.awt.Color(181, 136, 99));
+        casilla32.setText(" ");
         panelTablero.add(casilla32);
 
-        casilla33.setText("jButton28");
+        casilla33.setBackground(new java.awt.Color(240, 217, 181));
+        casilla33.setText(" ");
         panelTablero.add(casilla33);
 
-        casilla34.setText("jButton32");
+        casilla34.setBackground(new java.awt.Color(181, 136, 99));
+        casilla34.setText(" ");
         panelTablero.add(casilla34);
 
-        casilla35.setText("jButton34");
+        casilla35.setBackground(new java.awt.Color(240, 217, 181));
+        casilla35.setText(" ");
         panelTablero.add(casilla35);
 
-        casilla36.setText("jButton29");
+        casilla36.setBackground(new java.awt.Color(181, 136, 99));
+        casilla36.setText(" ");
         panelTablero.add(casilla36);
 
-        casilla37.setText("jButton30");
+        casilla37.setBackground(new java.awt.Color(240, 217, 181));
+        casilla37.setText(" ");
         panelTablero.add(casilla37);
 
-        casilla40.setText("jButton31");
+        casilla40.setBackground(new java.awt.Color(240, 217, 181));
+        casilla40.setText(" ");
         panelTablero.add(casilla40);
 
-        casilla41.setText("jButton33");
+        casilla41.setBackground(new java.awt.Color(181, 136, 99));
+        casilla41.setText(" ");
         panelTablero.add(casilla41);
 
-        casilla42.setText("jButton39");
+        casilla42.setBackground(new java.awt.Color(240, 217, 181));
+        casilla42.setText(" ");
         panelTablero.add(casilla42);
 
-        casilla43.setText("jButton35");
+        casilla43.setBackground(new java.awt.Color(181, 136, 99));
+        casilla43.setText(" ");
         panelTablero.add(casilla43);
 
-        casilla44.setText("jButton36");
+        casilla44.setBackground(new java.awt.Color(240, 217, 181));
+        casilla44.setText(" ");
         panelTablero.add(casilla44);
 
-        casilla45.setText("jButton37");
+        casilla45.setBackground(new java.awt.Color(181, 136, 99));
+        casilla45.setText(" ");
         panelTablero.add(casilla45);
 
-        casilla46.setText("jButton38");
+        casilla46.setBackground(new java.awt.Color(240, 217, 181));
+        casilla46.setText(" ");
         panelTablero.add(casilla46);
 
-        casilla47.setText("jButton43");
+        casilla47.setBackground(new java.awt.Color(181, 136, 99));
+        casilla47.setText(" ");
         panelTablero.add(casilla47);
 
-        casilla50.setText("jButton41");
+        casilla50.setBackground(new java.awt.Color(181, 136, 99));
+        casilla50.setText(" ");
         panelTablero.add(casilla50);
 
-        casilla51.setText("jButton40");
+        casilla51.setBackground(new java.awt.Color(240, 217, 181));
+        casilla51.setText(" ");
         panelTablero.add(casilla51);
 
-        casilla52.setText("jButton42");
+        casilla52.setBackground(new java.awt.Color(181, 136, 99));
+        casilla52.setText(" ");
         panelTablero.add(casilla52);
 
-        casilla53.setText("jButton44");
+        casilla53.setBackground(new java.awt.Color(240, 217, 181));
+        casilla53.setText(" ");
         panelTablero.add(casilla53);
 
-        casilla54.setText("jButton45");
+        casilla54.setBackground(new java.awt.Color(181, 136, 99));
+        casilla54.setText(" ");
         panelTablero.add(casilla54);
 
-        casilla55.setText("jButton46");
+        casilla55.setBackground(new java.awt.Color(240, 217, 181));
+        casilla55.setText(" ");
         panelTablero.add(casilla55);
 
-        casilla56.setText("jButton47");
+        casilla56.setBackground(new java.awt.Color(181, 136, 99));
+        casilla56.setText(" ");
         panelTablero.add(casilla56);
 
-        casilla57.setText("jButton49");
+        casilla57.setBackground(new java.awt.Color(240, 217, 181));
+        casilla57.setText(" ");
         panelTablero.add(casilla57);
 
-        casilla60.setText("jButton48");
+        casilla60.setBackground(new java.awt.Color(240, 217, 181));
+        casilla60.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla60.setText("♟");
         panelTablero.add(casilla60);
 
-        casilla61.setText("jButton50");
+        casilla61.setBackground(new java.awt.Color(181, 136, 99));
+        casilla61.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla61.setText("♟");
         panelTablero.add(casilla61);
 
-        casilla62.setText("jButton51");
+        casilla62.setBackground(new java.awt.Color(240, 217, 181));
+        casilla62.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla62.setText("♟");
         panelTablero.add(casilla62);
 
-        casilla63.setText("jButton52");
+        casilla63.setBackground(new java.awt.Color(181, 136, 99));
+        casilla63.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla63.setText("♟");
         panelTablero.add(casilla63);
 
-        casilla64.setText("jButton53");
+        casilla64.setBackground(new java.awt.Color(240, 217, 181));
+        casilla64.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla64.setText("♟");
         panelTablero.add(casilla64);
 
-        casilla65.setText("jButton54");
+        casilla65.setBackground(new java.awt.Color(181, 136, 99));
+        casilla65.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla65.setText("♟");
         panelTablero.add(casilla65);
 
-        casilla66.setText("jButton55");
+        casilla66.setBackground(new java.awt.Color(240, 217, 181));
+        casilla66.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla66.setText("♟");
         panelTablero.add(casilla66);
 
-        casilla67.setText("jButton57");
+        casilla67.setBackground(new java.awt.Color(181, 136, 99));
+        casilla67.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla67.setText("♟");
         panelTablero.add(casilla67);
 
-        casilla70.setText("jButton56");
+        casilla70.setBackground(new java.awt.Color(181, 136, 99));
+        casilla70.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla70.setText(" ♜");
         panelTablero.add(casilla70);
 
-        casilla71.setText("jButton58");
+        casilla71.setBackground(new java.awt.Color(240, 217, 181));
+        casilla71.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla71.setText("♞");
         panelTablero.add(casilla71);
 
-        casilla72.setText("jButton59");
+        casilla72.setBackground(new java.awt.Color(181, 136, 99));
+        casilla72.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla72.setText("♝");
         panelTablero.add(casilla72);
 
-        casilla73.setText("jButton60");
+        casilla73.setBackground(new java.awt.Color(240, 217, 181));
+        casilla73.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla73.setText("♛");
         panelTablero.add(casilla73);
 
-        casilla74.setText("jButton61");
+        casilla74.setBackground(new java.awt.Color(181, 136, 99));
+        casilla74.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla74.setText("♚");
         panelTablero.add(casilla74);
 
-        casilla75.setText("jButton62");
+        casilla75.setBackground(new java.awt.Color(240, 217, 181));
+        casilla75.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla75.setText("♝");
         panelTablero.add(casilla75);
 
-        casilla76.setText("jButton63");
+        casilla76.setBackground(new java.awt.Color(181, 136, 99));
+        casilla76.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla76.setText("♞");
         panelTablero.add(casilla76);
 
-        casilla77.setText("jButton64");
+        casilla77.setBackground(new java.awt.Color(240, 217, 181));
+        casilla77.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        casilla77.setText("♜");
         panelTablero.add(casilla77);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -369,6 +478,14 @@ private void registrarMovimiento(String movimiento) {
     private void casilla02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casilla02ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_casilla02ActionPerformed
+
+    private void casilla00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casilla00ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_casilla00ActionPerformed
+
+    private void casilla22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casilla22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_casilla22ActionPerformed
 
     /**
      * @param args the command line arguments

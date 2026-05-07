@@ -36,7 +36,7 @@
     <Container class="javax.swing.JPanel" name="panelTablero">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="14" green="c8" red="c8" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -51,17 +51,39 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="casilla00">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton1"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x2656;"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="casilla00ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="casilla01">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton2"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" &#x2658;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla02">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton3"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x2657;"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="casilla02ActionPerformed"/>
@@ -69,307 +91,582 @@
         </Component>
         <Component class="javax.swing.JButton" name="casilla03">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton25"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" &#x2655;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla04">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton4"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" &#x2654;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla05">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton5"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x2657;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla06">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton7"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x2658;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla07">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton8"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x2656;"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla10">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton9"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x2659;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla11">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton11"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x2659;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla12">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton12"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x2659;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla13">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton6"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x2659;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla14">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton21"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x2659;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla15">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton14"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" &#x2659;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla16">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton23"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x2659;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla17">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton22"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" &#x2659;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla20">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton17"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla21">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton20"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla22">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton19"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="casilla22ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="casilla23">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton18"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla24">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton16"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla25">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton15"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla26">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton13"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla27">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton10"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla30">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton24"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla31">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton26"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla32">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton27"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla33">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton28"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla34">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton32"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla35">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton34"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla36">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton29"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla37">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton30"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla40">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton31"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla41">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton33"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla42">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton39"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla43">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton35"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla44">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton36"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla45">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton37"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla46">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton38"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla47">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton43"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla50">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton41"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla51">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton40"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla52">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton42"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla53">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton44"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla54">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton45"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla55">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton46"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla56">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton47"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla57">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton49"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla60">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton48"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265f;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla61">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton50"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265f;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla62">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton51"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265f;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla63">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton52"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265f;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla64">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton53"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265f;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla65">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton54"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265f;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla66">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton55"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265f;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla67">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton57"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265f;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla70">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton56"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" &#x265c;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla71">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton58"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265e;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla72">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton59"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265d;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla73">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton60"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265b;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla74">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton61"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265a;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla75">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton62"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265d;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla76">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton63"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="63" green="88" red="b5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265e;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="casilla77">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton64"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="b5" green="d9" red="f0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Symbol" size="36" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x265c;"/>
           </Properties>
         </Component>
       </SubComponents>
