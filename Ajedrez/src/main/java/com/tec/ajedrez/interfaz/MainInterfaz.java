@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.tec.ajedrez.interfaz;
+import com.tec.ajedrez.controlador.ControladorAjedrez;
 import javax.swing.SwingUtilities;
 /**
  *
@@ -10,11 +11,10 @@ import javax.swing.SwingUtilities;
  */
 public class MainInterfaz {
     public static void main(String[] args) {
-
         SwingUtilities.invokeLater(() -> {
             InterfazAjedrez ventana = new InterfazAjedrez();
+            new ControladorAjedrez(ventana);
             ventana.setVisible(true);
         });
-
     }
 }
