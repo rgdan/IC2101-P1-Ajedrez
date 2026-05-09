@@ -4,6 +4,10 @@
  */
 package com.tec.ajedrez.interfaz;
 
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
 /**
  *
  * @author Santi
@@ -557,4 +561,534 @@ private void registrarMovimiento(String movimiento) {
     private javax.swing.JButton casilla77;
     private javax.swing.JPanel panelTablero;
     // End of variables declaration//GEN-END:variables
+
+    public JTextArea getAreaMovimientos() {
+        return areaMovimientos;
+    }
+
+    public void setAreaMovimientos(JTextArea areaMovimientos) {
+        this.areaMovimientos = areaMovimientos;
+    }
+
+    public JButton getCasilla00() {
+        return casilla00;
+    }
+
+    public void setCasilla00(JButton casilla00) {
+        this.casilla00 = casilla00;
+    }
+
+    public JButton getCasilla01() {
+        return casilla01;
+    }
+
+    public void setCasilla01(JButton casilla01) {
+        this.casilla01 = casilla01;
+    }
+
+    public JButton getCasilla02() {
+        return casilla02;
+    }
+
+    public void setCasilla02(JButton casilla02) {
+        this.casilla02 = casilla02;
+    }
+
+    public JButton getCasilla03() {
+        return casilla03;
+    }
+
+    public void setCasilla03(JButton casilla03) {
+        this.casilla03 = casilla03;
+    }
+
+    public JButton getCasilla04() {
+        return casilla04;
+    }
+
+    public void setCasilla04(JButton casilla04) {
+        this.casilla04 = casilla04;
+    }
+
+    public JButton getCasilla05() {
+        return casilla05;
+    }
+
+    public void setCasilla05(JButton casilla05) {
+        this.casilla05 = casilla05;
+    }
+
+    public JButton getCasilla06() {
+        return casilla06;
+    }
+
+    public void setCasilla06(JButton casilla06) {
+        this.casilla06 = casilla06;
+    }
+
+    public JButton getCasilla07() {
+        return casilla07;
+    }
+
+    public void setCasilla07(JButton casilla07) {
+        this.casilla07 = casilla07;
+    }
+
+    public JButton getCasilla10() {
+        return casilla10;
+    }
+
+    public void setCasilla10(JButton casilla10) {
+        this.casilla10 = casilla10;
+    }
+
+    public JButton getCasilla11() {
+        return casilla11;
+    }
+
+    public void setCasilla11(JButton casilla11) {
+        this.casilla11 = casilla11;
+    }
+
+    public JButton getCasilla12() {
+        return casilla12;
+    }
+
+    public void setCasilla12(JButton casilla12) {
+        this.casilla12 = casilla12;
+    }
+
+    public JButton getCasilla13() {
+        return casilla13;
+    }
+
+    public void setCasilla13(JButton casilla13) {
+        this.casilla13 = casilla13;
+    }
+
+    public JButton getCasilla14() {
+        return casilla14;
+    }
+
+    public void setCasilla14(JButton casilla14) {
+        this.casilla14 = casilla14;
+    }
+
+    public JButton getCasilla15() {
+        return casilla15;
+    }
+
+    public void setCasilla15(JButton casilla15) {
+        this.casilla15 = casilla15;
+    }
+
+    public JButton getCasilla16() {
+        return casilla16;
+    }
+
+    public void setCasilla16(JButton casilla16) {
+        this.casilla16 = casilla16;
+    }
+
+    public JButton getCasilla17() {
+        return casilla17;
+    }
+
+    public void setCasilla17(JButton casilla17) {
+        this.casilla17 = casilla17;
+    }
+
+    public JButton getCasilla20() {
+        return casilla20;
+    }
+
+    public void setCasilla20(JButton casilla20) {
+        this.casilla20 = casilla20;
+    }
+
+    public JButton getCasilla21() {
+        return casilla21;
+    }
+
+    public void setCasilla21(JButton casilla21) {
+        this.casilla21 = casilla21;
+    }
+
+    public JButton getCasilla22() {
+        return casilla22;
+    }
+
+    public void setCasilla22(JButton casilla22) {
+        this.casilla22 = casilla22;
+    }
+
+    public JButton getCasilla23() {
+        return casilla23;
+    }
+
+    public void setCasilla23(JButton casilla23) {
+        this.casilla23 = casilla23;
+    }
+
+    public JButton getCasilla24() {
+        return casilla24;
+    }
+
+    public void setCasilla24(JButton casilla24) {
+        this.casilla24 = casilla24;
+    }
+
+    public JButton getCasilla25() {
+        return casilla25;
+    }
+
+    public void setCasilla25(JButton casilla25) {
+        this.casilla25 = casilla25;
+    }
+
+    public JButton getCasilla26() {
+        return casilla26;
+    }
+
+    public void setCasilla26(JButton casilla26) {
+        this.casilla26 = casilla26;
+    }
+
+    public JButton getCasilla27() {
+        return casilla27;
+    }
+
+    public void setCasilla27(JButton casilla27) {
+        this.casilla27 = casilla27;
+    }
+
+    public JButton getCasilla30() {
+        return casilla30;
+    }
+
+    public void setCasilla30(JButton casilla30) {
+        this.casilla30 = casilla30;
+    }
+
+    public JButton getCasilla31() {
+        return casilla31;
+    }
+
+    public void setCasilla31(JButton casilla31) {
+        this.casilla31 = casilla31;
+    }
+
+    public JButton getCasilla32() {
+        return casilla32;
+    }
+
+    public void setCasilla32(JButton casilla32) {
+        this.casilla32 = casilla32;
+    }
+
+    public JButton getCasilla33() {
+        return casilla33;
+    }
+
+    public void setCasilla33(JButton casilla33) {
+        this.casilla33 = casilla33;
+    }
+
+    public JButton getCasilla34() {
+        return casilla34;
+    }
+
+    public void setCasilla34(JButton casilla34) {
+        this.casilla34 = casilla34;
+    }
+
+    public JButton getCasilla35() {
+        return casilla35;
+    }
+
+    public void setCasilla35(JButton casilla35) {
+        this.casilla35 = casilla35;
+    }
+
+    public JButton getCasilla36() {
+        return casilla36;
+    }
+
+    public void setCasilla36(JButton casilla36) {
+        this.casilla36 = casilla36;
+    }
+
+    public JButton getCasilla37() {
+        return casilla37;
+    }
+
+    public void setCasilla37(JButton casilla37) {
+        this.casilla37 = casilla37;
+    }
+
+    public JButton getCasilla40() {
+        return casilla40;
+    }
+
+    public void setCasilla40(JButton casilla40) {
+        this.casilla40 = casilla40;
+    }
+
+    public JButton getCasilla41() {
+        return casilla41;
+    }
+
+    public void setCasilla41(JButton casilla41) {
+        this.casilla41 = casilla41;
+    }
+
+    public JButton getCasilla42() {
+        return casilla42;
+    }
+
+    public void setCasilla42(JButton casilla42) {
+        this.casilla42 = casilla42;
+    }
+
+    public JButton getCasilla43() {
+        return casilla43;
+    }
+
+    public void setCasilla43(JButton casilla43) {
+        this.casilla43 = casilla43;
+    }
+
+    public JButton getCasilla44() {
+        return casilla44;
+    }
+
+    public void setCasilla44(JButton casilla44) {
+        this.casilla44 = casilla44;
+    }
+
+    public JButton getCasilla45() {
+        return casilla45;
+    }
+
+    public void setCasilla45(JButton casilla45) {
+        this.casilla45 = casilla45;
+    }
+
+    public JButton getCasilla46() {
+        return casilla46;
+    }
+
+    public void setCasilla46(JButton casilla46) {
+        this.casilla46 = casilla46;
+    }
+
+    public JButton getCasilla47() {
+        return casilla47;
+    }
+
+    public void setCasilla47(JButton casilla47) {
+        this.casilla47 = casilla47;
+    }
+
+    public JButton getCasilla50() {
+        return casilla50;
+    }
+
+    public void setCasilla50(JButton casilla50) {
+        this.casilla50 = casilla50;
+    }
+
+    public JButton getCasilla51() {
+        return casilla51;
+    }
+
+    public void setCasilla51(JButton casilla51) {
+        this.casilla51 = casilla51;
+    }
+
+    public JButton getCasilla52() {
+        return casilla52;
+    }
+
+    public void setCasilla52(JButton casilla52) {
+        this.casilla52 = casilla52;
+    }
+
+    public JButton getCasilla53() {
+        return casilla53;
+    }
+
+    public void setCasilla53(JButton casilla53) {
+        this.casilla53 = casilla53;
+    }
+
+    public JButton getCasilla54() {
+        return casilla54;
+    }
+
+    public void setCasilla54(JButton casilla54) {
+        this.casilla54 = casilla54;
+    }
+
+    public JButton getCasilla55() {
+        return casilla55;
+    }
+
+    public void setCasilla55(JButton casilla55) {
+        this.casilla55 = casilla55;
+    }
+
+    public JButton getCasilla56() {
+        return casilla56;
+    }
+
+    public void setCasilla56(JButton casilla56) {
+        this.casilla56 = casilla56;
+    }
+
+    public JButton getCasilla57() {
+        return casilla57;
+    }
+
+    public void setCasilla57(JButton casilla57) {
+        this.casilla57 = casilla57;
+    }
+
+    public JButton getCasilla60() {
+        return casilla60;
+    }
+
+    public void setCasilla60(JButton casilla60) {
+        this.casilla60 = casilla60;
+    }
+
+    public JButton getCasilla61() {
+        return casilla61;
+    }
+
+    public void setCasilla61(JButton casilla61) {
+        this.casilla61 = casilla61;
+    }
+
+    public JButton getCasilla62() {
+        return casilla62;
+    }
+
+    public void setCasilla62(JButton casilla62) {
+        this.casilla62 = casilla62;
+    }
+
+    public JButton getCasilla63() {
+        return casilla63;
+    }
+
+    public void setCasilla63(JButton casilla63) {
+        this.casilla63 = casilla63;
+    }
+
+    public JButton getCasilla64() {
+        return casilla64;
+    }
+
+    public void setCasilla64(JButton casilla64) {
+        this.casilla64 = casilla64;
+    }
+
+    public JButton getCasilla65() {
+        return casilla65;
+    }
+
+    public void setCasilla65(JButton casilla65) {
+        this.casilla65 = casilla65;
+    }
+
+    public JButton getCasilla66() {
+        return casilla66;
+    }
+
+    public void setCasilla66(JButton casilla66) {
+        this.casilla66 = casilla66;
+    }
+
+    public JButton getCasilla67() {
+        return casilla67;
+    }
+
+    public void setCasilla67(JButton casilla67) {
+        this.casilla67 = casilla67;
+    }
+
+    public JButton getCasilla70() {
+        return casilla70;
+    }
+
+    public void setCasilla70(JButton casilla70) {
+        this.casilla70 = casilla70;
+    }
+
+    public JButton getCasilla71() {
+        return casilla71;
+    }
+
+    public void setCasilla71(JButton casilla71) {
+        this.casilla71 = casilla71;
+    }
+
+    public JButton getCasilla72() {
+        return casilla72;
+    }
+
+    public void setCasilla72(JButton casilla72) {
+        this.casilla72 = casilla72;
+    }
+
+    public JButton getCasilla73() {
+        return casilla73;
+    }
+
+    public void setCasilla73(JButton casilla73) {
+        this.casilla73 = casilla73;
+    }
+
+    public JButton getCasilla74() {
+        return casilla74;
+    }
+
+    public void setCasilla74(JButton casilla74) {
+        this.casilla74 = casilla74;
+    }
+
+    public JButton getCasilla75() {
+        return casilla75;
+    }
+
+    public void setCasilla75(JButton casilla75) {
+        this.casilla75 = casilla75;
+    }
+
+    public JButton getCasilla76() {
+        return casilla76;
+    }
+
+    public void setCasilla76(JButton casilla76) {
+        this.casilla76 = casilla76;
+    }
+
+    public JButton getCasilla77() {
+        return casilla77;
+    }
+
+    public void setCasilla77(JButton casilla77) {
+        this.casilla77 = casilla77;
+    }
+
+    public JPanel getPanelTablero() {
+        return panelTablero;
+    }
+
+    public void setPanelTablero(JPanel panelTablero) {
+        this.panelTablero = panelTablero;
+    }
+
 }
+
