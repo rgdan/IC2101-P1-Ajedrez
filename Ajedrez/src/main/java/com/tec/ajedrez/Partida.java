@@ -29,41 +29,46 @@ public class Partida implements Serializable {
      * @return true si el movimiento fue válido y se ejecutó, false si no.
      */
     public boolean realizarMovimiento(int filaOrigen, int colOrigen, int filaDestino, int colDestino) {
-
         Casilla origen  = tablero.getCasilla(filaOrigen, colOrigen);
         Casilla destino = tablero.getCasilla(filaDestino, colDestino);
-
-        // 1. Debe haber una pieza en el origen
+        // 1. debe haber una pieza en el origen
         if (!origen.estaOcupada()) {
             return false;
         }
-
         Pieza pieza = origen.getPieza();
-
-        // 2. El jugador solo puede mover sus propias piezas
+        // 2. el jugador solo puede mover sus propias piezas
         if (pieza.getColor() != turnoActual.getColor()) {
             return false;
         }
-
-        // 3. La pieza debe considerar válido el movimiento
+        // 3. la pieza debe considerar valido el movimiento
         if (!pieza.validarMovimiento(destino)) {
             return false;
         }
-
-        // 4. Si no es caballo, el camino debe estar libre
+        // 4. si no es caballo, el camino debe estar libre
         if (!(pieza instanceof Caballo) && !tablero.caminoLibre(origen, destino)) {
             return false;
         }
-
-        // 5. Ejecutar el movimiento
-        historial.add(new Movimiento(origen, destino, pieza));
+        // guardar datos para poder deshacer si el rey queda en jaque
+        Pieza piezaCapturada = destino.getPieza();
+        Casilla posicionOriginal = pieza.getPosicionActual();
+        // 5. probar movimiento temporalmente
         origen.quitarPieza();
         destino.setPieza(pieza);
         pieza.setPosicionActual(destino);
+        // 6. revisar si mi propio rey queda en jaque
+        Rey miRey = buscarRey(pieza.getColor());
+        if (miRey != null && esJaque(miRey)) {
+            // deshacer movimiento
+            origen.setPieza(pieza);
+            destino.setPieza(piezaCapturada);
+            pieza.setPosicionActual(posicionOriginal);
 
-        // 6. Cambiar turno
+            return false;
+        }
+        // 7. si no quedó en jaque, el movimiento se acepta
+        historial.add(new Movimiento(origen, destino, pieza));
+        // 8. cambiar turno
         turnoActual = (turnoActual == jugadorBlanco) ? jugadorNegro : jugadorBlanco;
-
         return true;
     }
 
@@ -115,6 +120,21 @@ public class Partida implements Serializable {
 
         return false;
     }
+    private Rey buscarRey(Color color) {
+        for (int fila = 0; fila < 8; fila++) {
+            for (int columna = 0; columna < 8; columna++) {
+                Casilla casilla = tablero.getCasilla(fila, columna);
+                if (casilla.estaOcupada()) {
+                    Pieza pieza = casilla.getPieza();
+                    if (pieza instanceof Rey && pieza.getColor() == color) {
+                        return (Rey) pieza;
+                    }
+                }
+            }
+        }
+
+    return null;
+}
     
     /**
      * Revisa si el jugador está en jaque mate

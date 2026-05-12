@@ -19,6 +19,7 @@ public class ControladorAjedrez {
     private InterfazAjedrez vista;
     private int filaOrigen = -1;
     private int colOrigen = -1;
+    private boolean partidaTerminada = false;
     private javax.swing.JButton[][] botones;
     public ControladorAjedrez(InterfazAjedrez vista, Partida partida) {
         this.vista = vista;
@@ -143,6 +144,11 @@ public class ControladorAjedrez {
 
     }
     private void manejarClick(int fila, int columna) {
+            if (partidaTerminada) {
+                javax.swing.JOptionPane.showMessageDialog(vista,"La partida ya terminó.");
+                return;
+            }
+
         if (filaOrigen == -1) {
             filaOrigen = fila;
             colOrigen = columna;
@@ -194,7 +200,8 @@ public class ControladorAjedrez {
                 if (pieza instanceof Rey) {
                     Rey rey = (Rey) pieza;
                     if (partida.esJaqueMate(rey)) {
-                        javax.swing.JOptionPane.showMessageDialog(vista,"JAQUE MATE");
+                        partidaTerminada = true;
+                        javax.swing.JOptionPane.showMessageDialog(vista,"JAQUE MATE. Ganador: " + partida.getTurnoActual().getNombre());
                         return;
                     }
                     if (partida.esJaque(rey)) {
