@@ -10,6 +10,13 @@ import com.tec.ajedrez.Casilla;
 import com.tec.ajedrez.piezas.Pieza;
 import com.tec.ajedrez.piezas.Peon;
 import com.tec.ajedrez.piezas.Rey;
+import com.tec.ajedrez.piezas.Torre;
+import com.tec.ajedrez.piezas.Caballo;
+import com.tec.ajedrez.piezas.Alfil;
+import com.tec.ajedrez.piezas.Reina;
+import com.tec.ajedrez.enums.Color;
+import javax.swing.JFileChooser;
+import com.tec.ajedrez.Movimiento;
 /**
  *
  * @author Santi
@@ -33,12 +40,34 @@ public class ControladorAjedrez {
                 Casilla casilla= partida.getTablero().getCasilla(fila,columna);
                 if(casilla.estaOcupada()){
                     Pieza pieza=casilla.getPieza();
-                    botones[fila][columna].setText(pieza.toString());
+                    botones[fila][columna].setText(obtenerSimbolo(pieza));
                 }else{
                     botones[fila][columna].setText("");
                 }
             }
         }
+    }
+    private String obtenerSimbolo(Pieza pieza) {
+        Color color = pieza.getColor();
+        if (pieza instanceof Torre) {
+            return (color == Color.BLANCO) ? "♖" : "♜";
+        }
+        if (pieza instanceof Caballo) {
+            return (color == Color.BLANCO) ? "♘" : "♞";
+        }
+        if (pieza instanceof Alfil) {
+            return (color == Color.BLANCO) ? "♗" : "♝";
+        }
+        if (pieza instanceof Reina) {
+            return (color == Color.BLANCO) ? "♕" : "♛";
+        }
+        if (pieza instanceof Rey) {
+            return (color == Color.BLANCO) ? "♔" : "♚";
+        }
+        if (pieza instanceof Peon) {
+            return (color == Color.BLANCO) ? "♙" : "♟";
+        }
+        return "";
     }
     private void cargarBotones() {
         botones = new javax.swing.JButton[][] {
@@ -127,18 +156,34 @@ public class ControladorAjedrez {
         vista.getCasilla77().addActionListener(e -> manejarClick(7, 7));
         
         vista.getBtnGuardar().addActionListener(e -> {
-            GestorArchivos.guardarPartida(partida, "partida.dat");
-            javax.swing.JOptionPane.showMessageDialog(vista, "Partida guardada correctamente.");
+            JFileChooser selector = new JFileChooser();
+            int resultado = selector.showSaveDialog(vista);
+            if (resultado == JFileChooser.APPROVE_OPTION) {
+                String ruta =selector.getSelectedFile().getAbsolutePath();
+                if (!ruta.endsWith(".dat")) {
+                    ruta += ".dat";
+                }
+                GestorArchivos.guardarPartida(partida, ruta);
+                javax.swing.JOptionPane.showMessageDialog(vista,"Partida guardada correctamente.");
+            }
         });
 
         vista.getBtnCargar().addActionListener(e -> {
-            Partida partidaCargada = GestorArchivos.cargarPartida("partida.dat");
-            if (partidaCargada != null) {
-                partida = partidaCargada;
-                actualizarTablero();
-                javax.swing.JOptionPane.showMessageDialog(vista, "Partida cargada correctamente.");
-            } else {
-                javax.swing.JOptionPane.showMessageDialog(vista, "No se pudo cargar la partida.");
+            JFileChooser selector = new JFileChooser();
+            int resultado = selector.showOpenDialog(vista);
+            if (resultado == JFileChooser.APPROVE_OPTION) {
+                String ruta =selector.getSelectedFile().getAbsolutePath();
+                Partida partidaCargada =GestorArchivos.cargarPartida(ruta);
+                if (partidaCargada != null) {
+                    partida = partidaCargada;
+                    actualizarTablero();
+                    actualizarHistorial();
+                    vista.getLabelTurno().setText("Turno: " + partida.getTurnoActual().getColor());
+                    vista.getLabelTurno().setText("Turno: "+ partida.getTurnoActual().getColor());
+                    javax.swing.JOptionPane.showMessageDialog(vista,"Partida cargada correctamente.");
+                } else {
+                    javax.swing.JOptionPane.showMessageDialog(vista,"No se pudo cargar la partida.");
+                }
             }
         });
 
@@ -210,6 +255,21 @@ public class ControladorAjedrez {
                     }
                 }
             }
+        }
+    }
+    private void actualizarHistorial() {
+
+        vista.getAreaMovimientos().setText("");
+
+        for (Movimiento mov : partida.getHistorial()) {
+
+            int filaOrigen = mov.getOrigen().getFila();
+            int colOrigen = mov.getOrigen().getColumna();
+
+            int filaDestino = mov.getDestino().getFila();
+            int colDestino = mov.getDestino().getColumna();
+
+            vista.getAreaMovimientos().append( filaOrigen + "," + colOrigen+ " -> "+ filaDestino + "," + colDestino + "\n");
         }
     }
 }
