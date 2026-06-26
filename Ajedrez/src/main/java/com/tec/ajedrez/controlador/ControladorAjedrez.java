@@ -217,6 +217,8 @@ public class ControladorAjedrez {
             }
         });
 
+        vista.getBtnReiniciar().addActionListener(e -> reiniciarPartida());
+
     }
     private void manejarClick(int fila, int columna) {
             if (partidaTerminada) {
@@ -264,25 +266,39 @@ public class ControladorAjedrez {
     private void revisarJaque() {
         for (int fila = 0; fila < 8; fila++) {
             for (int columna = 0; columna < 8; columna++) {
-                Casilla casilla =partida.getTablero().getCasilla(fila, columna);
-                if (!casilla.estaOcupada()) {
-                    continue;
-                }
+                Casilla casilla = partida.getTablero().getCasilla(fila, columna);
+                if (!casilla.estaOcupada()) continue;
                 Pieza pieza = casilla.getPieza();
                 if (pieza instanceof Rey) {
                     Rey rey = (Rey) pieza;
                     if (partida.esJaqueMate(rey)) {
                         partidaTerminada = true;
-                        javax.swing.JOptionPane.showMessageDialog(vista,"JAQUE MATE. Ganador: " + partida.getTurnoActual().getNombre());
+                        // The king in checkmate belongs to the LOSER; winner is the other player
+                        String ganador = (rey.getColor() == com.tec.ajedrez.enums.Color.NEGRO)
+                            ? partida.getJugadorBlanco().getNombre()
+                            : partida.getJugadorNegro().getNombre();
+                        javax.swing.JOptionPane.showMessageDialog(vista, "JAQUE MATE. Ganador: " + ganador);
+                        vista.getLabelTurno().setText("Ganador: " + ganador);
+                        vista.getBtnReiniciar().setVisible(true);
                         return;
                     }
                     if (partida.esJaque(rey)) {
-                        javax.swing.JOptionPane.showMessageDialog(vista,"JAQUE");
+                        javax.swing.JOptionPane.showMessageDialog(vista, "JAQUE");
                         return;
                     }
                 }
             }
         }
+    }
+    private void reiniciarPartida() {
+        partida = new Partida(partida.getJugadorBlanco(), partida.getJugadorNegro());
+        partidaTerminada = false;
+        filaOrigen = -1;
+        colOrigen = -1;
+        vista.getAreaMovimientos().setText("");
+        vista.getLabelTurno().setText("Turno: " + partida.getTurnoActual().getColor());
+        vista.getBtnReiniciar().setVisible(false);
+        actualizarTablero();
     }
     private void actualizarHistorial() {
 

@@ -462,6 +462,7 @@ public class InterfazAjedrez extends javax.swing.JFrame {
     private javax.swing.JLabel labelTurno;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnCargar;
+    private javax.swing.JButton btnReiniciar;
 
 private void configurarVista() {
     getContentPane().removeAll();
@@ -560,6 +561,10 @@ private void configurarVista() {
     labelTurno = new javax.swing.JLabel("Turno: Blanco");
     labelTurno.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 15));
     panelInferior.add(labelTurno);
+
+    btnReiniciar = new javax.swing.JButton("Nueva partida");
+    btnReiniciar.setVisible(false);
+    panelInferior.add(btnReiniciar);
 
     getContentPane().add(panelInferior, java.awt.BorderLayout.SOUTH);
 
@@ -665,6 +670,10 @@ private void registrarMovimiento(String movimiento) {
 
     public JButton getBtnCargar() {
         return btnCargar;
+    }
+
+    public JButton getBtnReiniciar() {
+        return btnReiniciar;
     }
 
     public void setAreaMovimientos(JTextArea areaMovimientos) {

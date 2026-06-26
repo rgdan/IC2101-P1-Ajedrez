@@ -263,6 +263,8 @@ public class Partida implements Serializable {
     public Jugador getTurnoActual()      { return turnoActual; }
     public List<Movimiento> getHistorial() { return historial;  }
     public Tablero getTablero()          { return tablero;     }
+    public Jugador getJugadorBlanco()    { return jugadorBlanco; }
+    public Jugador getJugadorNegro()     { return jugadorNegro; }
 
     /* SETTERS */
     public void setEstado(EstadoPartida estado) { this.estado = estado; }
