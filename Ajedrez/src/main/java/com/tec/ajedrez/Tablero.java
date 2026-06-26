@@ -36,8 +36,8 @@ public class Tablero implements Serializable {
         casillas[0][0].setPieza(new Torre  (Color.BLANCO, casillas[0][0], true));
         casillas[0][1].setPieza(new Caballo(Color.BLANCO, casillas[0][1], true));
         casillas[0][2].setPieza(new Alfil  (Color.BLANCO, casillas[0][2], true));
-        casillas[0][3].setPieza(new Rey    (Color.BLANCO, casillas[0][3], true));
-        casillas[0][4].setPieza(new Reina  (Color.BLANCO, casillas[0][4], true));
+        casillas[0][3].setPieza(new Reina  (Color.BLANCO, casillas[0][3], true)); // Reina en 3
+        casillas[0][4].setPieza(new Rey    (Color.BLANCO, casillas[0][4], true)); // Rey en 4
         casillas[0][5].setPieza(new Alfil  (Color.BLANCO, casillas[0][5], true));
         casillas[0][6].setPieza(new Caballo(Color.BLANCO, casillas[0][6], true));
         casillas[0][7].setPieza(new Torre  (Color.BLANCO, casillas[0][7], true));
@@ -46,8 +46,8 @@ public class Tablero implements Serializable {
         casillas[7][0].setPieza(new Torre  (Color.NEGRO, casillas[7][0], true));
         casillas[7][1].setPieza(new Caballo(Color.NEGRO, casillas[7][1], true));
         casillas[7][2].setPieza(new Alfil  (Color.NEGRO, casillas[7][2], true));
-        casillas[7][3].setPieza(new Rey    (Color.NEGRO, casillas[7][3], true));
-        casillas[7][4].setPieza(new Reina  (Color.NEGRO, casillas[7][4], true));
+        casillas[7][3].setPieza(new Reina  (Color.NEGRO, casillas[7][3], true)); // Reina en 3
+        casillas[7][4].setPieza(new Rey    (Color.NEGRO, casillas[7][4], true)); // Rey en 4
         casillas[7][5].setPieza(new Alfil  (Color.NEGRO, casillas[7][5], true));
         casillas[7][6].setPieza(new Caballo(Color.NEGRO, casillas[7][6], true));
         casillas[7][7].setPieza(new Torre  (Color.NEGRO, casillas[7][7], true));
