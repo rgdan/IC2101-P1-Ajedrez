@@ -535,29 +535,36 @@ private void configurarVista() {
     getContentPane().add(panelTableroConCoordenadas, java.awt.BorderLayout.CENTER);
     getContentPane().add(panelHistorial, java.awt.BorderLayout.EAST);
 
-    pack();
-    setLocationRelativeTo(null);
-    // panel inferior para informacion y botones
-    javax.swing.JPanel panelInferior = new javax.swing.JPanel();
+    // Barra de menú con submenú de persistencia
+    javax.swing.JMenuBar menuBar = new javax.swing.JMenuBar();
+    javax.swing.JMenu menuPartida = new javax.swing.JMenu("Partida");
 
-    // texto del turno actual
-    labelTurno = new javax.swing.JLabel("Turno: Blanco");
-
-    // texto del estado de la partida
-    javax.swing.JLabel labelEstado = new javax.swing.JLabel("Estado: En juego");
-
-    // botones
     btnGuardar = new javax.swing.JButton("Guardar");
     btnCargar = new javax.swing.JButton("Cargar");
 
-    // agrega los elementos al panel inferior
-    panelInferior.add(labelTurno);
-    panelInferior.add(labelEstado);
-    panelInferior.add(btnGuardar);
-    panelInferior.add(btnCargar);
+    javax.swing.JMenuItem itemGuardar = new javax.swing.JMenuItem("Guardar partida");
+    javax.swing.JMenuItem itemCargar = new javax.swing.JMenuItem("Cargar partida");
 
-    // agrega el panel abajo de la ventana
+    // Forward menu item clicks to the actual buttons so controller listeners still work
+    itemGuardar.addActionListener(e -> btnGuardar.doClick());
+    itemCargar.addActionListener(e -> btnCargar.doClick());
+
+    menuPartida.add(itemGuardar);
+    menuPartida.add(itemCargar);
+    menuBar.add(menuPartida);
+    setJMenuBar(menuBar);
+
+    // Panel inferior con el turno centrado
+    javax.swing.JPanel panelInferior = new javax.swing.JPanel(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER));
+
+    labelTurno = new javax.swing.JLabel("Turno: Blanco");
+    labelTurno.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 15));
+    panelInferior.add(labelTurno);
+
     getContentPane().add(panelInferior, java.awt.BorderLayout.SOUTH);
+
+    pack();
+    setLocationRelativeTo(null);
 }
 
 private void registrarMovimiento(String movimiento) {
