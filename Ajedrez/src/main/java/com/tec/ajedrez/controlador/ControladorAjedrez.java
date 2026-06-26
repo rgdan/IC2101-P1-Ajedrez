@@ -33,6 +33,7 @@ public class ControladorAjedrez {
         this.partida=partida;
         cargarBotones();
         inicializarEventos();
+        actualizarTablero();
     }
     private void actualizarTablero(){
         for(int fila=0;fila<8;fila++){
@@ -40,34 +41,63 @@ public class ControladorAjedrez {
                 Casilla casilla= partida.getTablero().getCasilla(fila,columna);
                 if(casilla.estaOcupada()){
                     Pieza pieza=casilla.getPieza();
-                    botones[fila][columna].setText(obtenerSimbolo(pieza));
+                    botones[fila][columna].setText("");
+                    botones[fila][columna].setIcon(obtenerIcono(pieza, botones[fila][columna].getWidth(), botones[fila][columna].getHeight()));
                 }else{
                     botones[fila][columna].setText("");
+                    botones[fila][columna].setIcon(null);
                 }
             }
         }
     }
-    private String obtenerSimbolo(Pieza pieza) {
+    private javax.swing.ImageIcon obtenerIcono(Pieza pieza, int width, int height) {
         Color color = pieza.getColor();
+        String colorStr = (color == Color.BLANCO) ? "white" : "black";
+        String tipoStr = "";
         if (pieza instanceof Torre) {
-            return (color == Color.BLANCO) ? "♖" : "♜";
+            tipoStr = "rook";
+        } else if (pieza instanceof Caballo) {
+            tipoStr = "knight";
+        } else if (pieza instanceof Alfil) {
+            tipoStr = "bishop";
+        } else if (pieza instanceof Reina) {
+            tipoStr = "queen";
+        } else if (pieza instanceof Rey) {
+            tipoStr = "king";
+        } else if (pieza instanceof Peon) {
+            tipoStr = "pawn";
         }
-        if (pieza instanceof Caballo) {
-            return (color == Color.BLANCO) ? "♘" : "♞";
+        
+        if (tipoStr.isEmpty()) return null;
+        
+        String filename = colorStr + "-" + tipoStr + ".png";
+        String path = "/com/tec/ajedrez/sprites/" + filename;
+        
+        javax.swing.ImageIcon icon = null;
+        java.net.URL imgURL = ControladorAjedrez.class.getResource(path);
+        if (imgURL != null) {
+            icon = new javax.swing.ImageIcon(imgURL);
+        } else {
+            // Fallback to filesystem
+            java.io.File file = new java.io.File("src/main/java/com/tec/ajedrez/sprites/" + filename);
+            if (!file.exists()) {
+                file = new java.io.File("Ajedrez/src/main/java/com/tec/ajedrez/sprites/" + filename);
+            }
+            if (file.exists()) {
+                icon = new javax.swing.ImageIcon(file.getAbsolutePath());
+            }
         }
-        if (pieza instanceof Alfil) {
-            return (color == Color.BLANCO) ? "♗" : "♝";
+
+        if (icon != null) {
+            int targetW = width > 20 ? (int)(width * 0.8) : 60;
+            int targetH = height > 20 ? (int)(height * 0.8) : 60;
+            java.awt.Image img = icon.getImage();
+            java.awt.Image newImg = img.getScaledInstance(targetW, targetH, java.awt.Image.SCALE_SMOOTH);
+            return new javax.swing.ImageIcon(newImg);
+        } else {
+            System.err.println("No se pudo encontrar el sprite: " + filename);
+            return null;
         }
-        if (pieza instanceof Reina) {
-            return (color == Color.BLANCO) ? "♕" : "♛";
-        }
-        if (pieza instanceof Rey) {
-            return (color == Color.BLANCO) ? "♔" : "♚";
-        }
-        if (pieza instanceof Peon) {
-            return (color == Color.BLANCO) ? "♙" : "♟";
-        }
-        return "";
     }
     private void cargarBotones() {
         botones = new javax.swing.JButton[][] {
@@ -201,12 +231,9 @@ public class ControladorAjedrez {
         } else {
             boolean movimientoValido = partida.realizarMovimiento(filaOrigen,colOrigen, fila,columna);
             if (movimientoValido) {
-                String pieza = botones[filaOrigen][colOrigen].getText();
-                botones[fila][columna].setText(pieza);
-                botones[filaOrigen][colOrigen].setText("");
                 vista.getAreaMovimientos().append(filaOrigen + "," + colOrigen+ " -> "+ fila + "," + columna + "\n" );
                 revisarPromocion(fila, columna);
-                //actualizarTablero();
+                actualizarTablero();
                 revisarJaque();
                 vista.getLabelTurno().setText("Turno: " +partida.getTurnoActual().getColor());
                 System.out.println("Movimiento realizado");
