@@ -484,7 +484,55 @@ private void configurarVista() {
     panelHistorial.add(titulo, java.awt.BorderLayout.NORTH);
     panelHistorial.add(scroll, java.awt.BorderLayout.CENTER);
 
-    getContentPane().add(panelTablero, java.awt.BorderLayout.CENTER);
+    // Panel contenedor del tablero con coordenadas
+    javax.swing.JPanel panelTableroConCoordenadas = new javax.swing.JPanel(new java.awt.BorderLayout());
+    panelTableroConCoordenadas.setBackground(new java.awt.Color(240, 217, 181));
+
+    // Letras superior
+    javax.swing.JPanel panelLetrasSup = new javax.swing.JPanel(new java.awt.GridLayout(1, 8));
+    panelLetrasSup.setBackground(new java.awt.Color(240, 217, 181));
+    // Letras inferior
+    javax.swing.JPanel panelLetrasInf = new javax.swing.JPanel(new java.awt.GridLayout(1, 8));
+    panelLetrasInf.setBackground(new java.awt.Color(240, 217, 181));
+
+    for (int i = 0; i < 8; i++) {
+        String letra = String.valueOf((char) ('A' + i));
+        
+        javax.swing.JLabel labelSup = new javax.swing.JLabel(letra, javax.swing.SwingConstants.CENTER);
+        labelSup.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 14));
+        panelLetrasSup.add(labelSup);
+        
+        javax.swing.JLabel labelInf = new javax.swing.JLabel(letra, javax.swing.SwingConstants.CENTER);
+        labelInf.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 14));
+        panelLetrasInf.add(labelInf);
+    }
+
+    // Números izquierdo
+    javax.swing.JPanel panelNumerosIzq = new javax.swing.JPanel(new java.awt.GridLayout(8, 1));
+    panelNumerosIzq.setBackground(new java.awt.Color(240, 217, 181));
+    // Números derecho
+    javax.swing.JPanel panelNumerosDer = new javax.swing.JPanel(new java.awt.GridLayout(8, 1));
+    panelNumerosDer.setBackground(new java.awt.Color(240, 217, 181));
+
+    for (int i = 0; i < 8; i++) {
+        String numero = String.valueOf(i + 1);
+        
+        javax.swing.JLabel labelIzq = new javax.swing.JLabel("  " + numero + "  ", javax.swing.SwingConstants.CENTER);
+        labelIzq.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 14));
+        panelNumerosIzq.add(labelIzq);
+        
+        javax.swing.JLabel labelDer = new javax.swing.JLabel("  " + numero + "  ", javax.swing.SwingConstants.CENTER);
+        labelDer.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 14));
+        panelNumerosDer.add(labelDer);
+    }
+
+    panelTableroConCoordenadas.add(panelLetrasSup, java.awt.BorderLayout.NORTH);
+    panelTableroConCoordenadas.add(panelLetrasInf, java.awt.BorderLayout.SOUTH);
+    panelTableroConCoordenadas.add(panelNumerosIzq, java.awt.BorderLayout.WEST);
+    panelTableroConCoordenadas.add(panelNumerosDer, java.awt.BorderLayout.EAST);
+    panelTableroConCoordenadas.add(panelTablero, java.awt.BorderLayout.CENTER);
+
+    getContentPane().add(panelTableroConCoordenadas, java.awt.BorderLayout.CENTER);
     getContentPane().add(panelHistorial, java.awt.BorderLayout.EAST);
 
     pack();

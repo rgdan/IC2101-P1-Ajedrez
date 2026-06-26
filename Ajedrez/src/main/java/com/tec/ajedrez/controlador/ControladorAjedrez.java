@@ -231,7 +231,7 @@ public class ControladorAjedrez {
         } else {
             boolean movimientoValido = partida.realizarMovimiento(filaOrigen,colOrigen, fila,columna);
             if (movimientoValido) {
-                vista.getAreaMovimientos().append(filaOrigen + "," + colOrigen+ " -> "+ fila + "," + columna + "\n" );
+                vista.getAreaMovimientos().append(convertirACoordenada(filaOrigen, colOrigen) + " -> " + convertirACoordenada(fila, columna) + "\n" );
                 revisarPromocion(fila, columna);
                 actualizarTablero();
                 revisarJaque();
@@ -296,7 +296,13 @@ public class ControladorAjedrez {
             int filaDestino = mov.getDestino().getFila();
             int colDestino = mov.getDestino().getColumna();
 
-            vista.getAreaMovimientos().append( filaOrigen + "," + colOrigen+ " -> "+ filaDestino + "," + colDestino + "\n");
+            vista.getAreaMovimientos().append(convertirACoordenada(filaOrigen, colOrigen) + " -> " + convertirACoordenada(filaDestino, colDestino) + "\n");
         }
+    }
+    
+    private String convertirACoordenada(int fila, int columna) {
+        char letra = (char) ('a' + columna);
+        int numero = fila + 1;
+        return "" + letra + numero;
     }
 }
