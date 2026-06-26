@@ -1,4 +1,4 @@
-# Primer Proyecto Programado: Ajedrez en Java (POO)
+![Primer Proyecto Programado: Implementación del juego de Ajedrez utilizando POO en Java](docs/titulo.png)
 
 Este proyecto implementa un sistema de ajedrez completo en Java, aplicando los principios de la **Programación Orientada a Objetos (POO)**. El sistema permite gestionar partidas entre jugadores, validar reglas del juego, registrar movimientos y mantener la persistencia del estado de cada partida.
 
